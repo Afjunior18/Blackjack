@@ -5,3 +5,5 @@ from blackj.clear_terminal import clear_terminal
 player_name = welcome_message()
 print(f"Let's have some fun...{player_name}\n")
 
+
+if __name__ == "__main__":
