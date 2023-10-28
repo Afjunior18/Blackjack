@@ -24,7 +24,7 @@ def welcome_message():
             if name.isalpha():
                 break
     else:
-        print(f"Welcome {name} to the Blackjack Game!\nLet's have fun...\n")
+        print(f"\nWelcome {name} to the Blackjack Game!\nLet's have fun...\n")
 
     return name
 
@@ -62,6 +62,7 @@ def rules_blackjack():
           "Q = 10\n"
           "K = 10\n"
           "A = 1\n")
+    
     
 # Clear terminal -----------------------------------------------------------------------------------------------
 
@@ -103,10 +104,9 @@ def deal_cards(my_deck):
     return [str(my_deck.draw_card()), str(my_deck.draw_card())]
 
 def create_players(player_name, my_deck):
-    player = {'name': player_name, 'hand': [my_deck.draw_card(), my_deck.draw_card()]}
-    dealer = {'name': 'Dealer', 'hand': [my_deck.draw_card(), my_deck.draw_card()]}
+    player = {'name': player_name, 
+              'hand': [my_deck.draw_card(), my_deck.draw_card()]}
+    dealer = {'name': 'Dealer', 
+              'hand': [my_deck.draw_card(), my_deck.draw_card()]}
     
     return player, dealer
-    
-    
-    
