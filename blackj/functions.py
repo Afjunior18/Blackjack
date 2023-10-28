@@ -1,4 +1,6 @@
 import os
+from blackj.classes import Deck
+
 
 # Welcome message -------------------------------------------------------------------------------------
 
@@ -89,3 +91,21 @@ def menu():
             break
         else:
             print("Invalid Choice: Please choose '1' or '2'")
+            
+# Deal cards and Function Create players --------------------------------------------------------------------------------------------
+
+def deal_cards(my_deck):
+    """
+    Function to deal two cards from the deck.
+    Return a list containing two cards dealt from the deck.
+    """
+    return [my_deck.pop(), my_deck.pop()]
+
+def create_players(player_name, my_deck):
+    player = {'name': player_name, 'hand': deal_cards(my_deck)}
+    dealer = {'name': 'Dealer', 'hand': deal_cards(my_deck)}
+    
+    return player, dealer
+    
+    
+    

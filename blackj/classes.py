@@ -22,3 +22,7 @@ class Deck:
     def display_deck(self):
         for card in self.cards:
             print(f"{card.value} of {card.suit}")
+            
+    def draw_card(self):
+        return self.cards.pop()
+        
