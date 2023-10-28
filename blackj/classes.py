@@ -13,7 +13,7 @@ class Deck:
     Will display
     """
     def __init__(self):
-        suits = ['Hearts', 'Clubs', 'Spades', 'Diamonds']
+        suits = ['\u2665', '\u2666', '\u2663', '\u2660']
         values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace']
         self.cards = [Card(value, suit) for suit in suits for value in values]
     
