@@ -20,5 +20,9 @@ if __name__ == "__main__":
     
     functions.menu()
     
-    my_deck.display_deck()
+    # my_deck.display_deck()
+
+
+print(f"\n{player['name']}'s hand: {player['hand']}")
+print(f"\n{dealer['name']}'s hand: {dealer['hand']}\n")
 
