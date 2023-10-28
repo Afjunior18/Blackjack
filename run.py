@@ -1,17 +1,14 @@
-from blackj.welcome_message import welcome_message
-from blackj.clear_terminal import clear_terminal
-from blackj.rules_blackjack import rules_blackjack
-from blackj.menu import menu
-from blackj.classes import Card
-from blackj.classes import Deck
+from blackj import functions
+from blackj import classes
 
 
-my_deck = Deck()
+my_deck = classes.Deck()
+
 
 
 if __name__ == "__main__":
     
-    welcome_message()
-    menu()
+    functions.welcome_message()
+    functions.menu()
     
     my_deck.display_deck()

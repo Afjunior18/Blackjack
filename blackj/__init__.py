@@ -1,2 +1,2 @@
-from blackj.welcome_message import welcome_message
-from blackj.clear_terminal import clear_terminal
+import blackj.functions
+import blackj.classes
