@@ -1,3 +1,6 @@
+from colorama import Fore, Back, Style, init
+init(autoreset=True)
+
 from blackj import functions
 from blackj import classes
 
