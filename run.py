@@ -23,6 +23,6 @@ if __name__ == "__main__":
     # my_deck.display_deck()
 
 
-print(f"\n{player['name']}'s hand: {player['hand']}")
-print(f"\n{dealer['name']}'s hand: {dealer['hand']}\n")
+print(f"\n{player['name']}'s hand: {[str(card) for card in player['hand']]}")
+print(f"\n{dealer['name']}'s hand: {[str(card) for card in dealer['hand']]}\n")
 

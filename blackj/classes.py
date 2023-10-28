@@ -1,4 +1,5 @@
 from colorama import Fore, Style
+import random
 
 class Card:
     """
@@ -27,5 +28,5 @@ class Deck:
             print(f"{card.value} of {card.suit}")
             
     def draw_card(self):
-        return self.cards.pop()
+        return random.choice(self.cards) 
         
