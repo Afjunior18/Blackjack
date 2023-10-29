@@ -1,5 +1,6 @@
 import os
 from blackj.classes import Deck
+from blackj import functions
 
 
 
@@ -108,6 +109,9 @@ def create_players(player_name, my_deck):
               'hand': [my_deck.draw_card(), my_deck.draw_card()]}
     dealer = {'name': 'Dealer', 
               'hand': [my_deck.draw_card(), my_deck.draw_card()]}
+    
+    player['hand'] = [functions.card_value_to_int(card.value) for card in player['hand']]
+    dealer['hand'] = [functions.card_value_to_int(card.value) for card in dealer['hand']]
     
     return player, dealer
 
