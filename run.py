@@ -21,4 +21,6 @@ if __name__ == "__main__":
     # my_deck.display_deck()
     
     functions.display_hand(player, dealer)
+    
+    functions.stand_or_hit(player, my_deck)
 

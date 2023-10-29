@@ -80,7 +80,7 @@ def menu():
     Display menu options and handle user's choice.
     """
     while True:
-        print("Wanna see the GAME RULES, press (1) or START GAME preesing (2)\n")
+        print("Would you like to check the GAME RULES, press (1) or START GAME press (2)?\n")
         start_game = 2
         rules_game = 1
     
@@ -138,6 +138,7 @@ def card_value_to_int(card_value):
             return 0
 
 # Convert Card value to int -----------------------------------------------------------------------------
+
 def display_hand(player, dealer):
     """
     Display player and dealer hands
@@ -146,6 +147,24 @@ def display_hand(player, dealer):
     player_hand = [f"{card} of {suit}" for card, suit in player['hand']]
     dealer_hand = [f"{card} of {suit}" for card, suit in dealer['hand']]
 
-    print(f"{player['name']}'s hand: {', '.join(player_hand)}")
+    print(f"\n{player['name']}'s hand: {', '.join(player_hand)}\n\n")
     print(f"{dealer['name']}'s hand: {', '.join(dealer_hand)}")
-      
+
+# Stand or Hit function -----------------------------------------------------------------------------
+
+def stand_or_hit(player, my_deck):
+    """
+    Function to handle the player's turn. Choice between Stand (s) or Hit (h)
+    If HIT is chosen, a card is drawn and added to the player's hand.
+    If Stand is chosen, player keep with his hand and is dealer's turn.
+    """
+    while True:
+        choice = input(f"{player['name']}, Do you want to STAND (s) or HIT (h)?\n")
+        if choice == 's':
+            break
+        elif choice == 'h':
+            drawn_card = my_deck.draw_card()
+            player['hand'].append((drawn_card.value, drawn_card.suit))
+            print(f"\n{player['name']}: {player['hand']}\n")
+        else:
+            print("Invalid input, please (s) for stand or (h) for hit")
