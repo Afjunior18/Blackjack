@@ -136,4 +136,17 @@ def card_value_to_int(card_value):
             return 10
         else:
             return 0
-        
+
+# Convert Card value to int -----------------------------------------------------------------------------
+def display_hand(player, dealer):
+    """
+    Display player and delaer hands
+    """
+    print(f"{player['name']}'s hand:", end=" ")
+    for card in player['hand']:
+        print(f"{card}", end=", ")
+    print("\n\n")
+    
+    print(f"{dealer['name']}'s hand:", end=" ")
+    for card in dealer['hand']:
+        print(f"{card}", end=", ")

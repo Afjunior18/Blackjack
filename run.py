@@ -10,8 +10,6 @@ from blackj import classes
 my_deck = classes.Deck()
 
 
-
-
 if __name__ == "__main__":
     
     player_name = functions.welcome_message()
@@ -21,7 +19,7 @@ if __name__ == "__main__":
     functions.menu()
     
     # my_deck.display_deck()
+    
+    hand = functions.display_hand(player, dealer)
 
-print(f"\n{player['name']}'s hand:", [str(card) for card in player['hand']])
-print(f"\n{dealer['name']}'s hand:", [str(card) for card in dealer['hand']], "\n")
-
+print(hand)
