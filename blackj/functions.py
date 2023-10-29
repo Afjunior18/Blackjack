@@ -110,8 +110,8 @@ def create_players(player_name, my_deck):
     dealer = {'name': 'Dealer', 
               'hand': [my_deck.draw_card(), my_deck.draw_card()]}
     
-    player['hand'] = [functions.card_value_to_int(card.value) for card in player['hand']]
-    dealer['hand'] = [functions.card_value_to_int(card.value) for card in dealer['hand']]
+    player['hand'] = [(card.value, card.suit) for card in player['hand']]
+    dealer['hand'] = [(card.value, card.suit) for card in dealer['hand']]
     
     return player, dealer
 
@@ -140,13 +140,12 @@ def card_value_to_int(card_value):
 # Convert Card value to int -----------------------------------------------------------------------------
 def display_hand(player, dealer):
     """
-    Display player and delaer hands
+    Display player and dealer hands
     """
-    print(f"{player['name']}'s hand:", end=" ")
-    for card in player['hand']:
-        print(f"{card}", end=", ")
-    print("\n\n")
-    
-    print(f"{dealer['name']}'s hand:", end=" ")
-    for card in dealer['hand']:
-        print(f"{card}", end=", ")
+
+    player_hand = [f"{card} of {suit}" for card, suit in player['hand']]
+    dealer_hand = [f"{card} of {suit}" for card, suit in dealer['hand']]
+
+    print(f"{player['name']}'s hand: {', '.join(player_hand)}")
+    print(f"{dealer['name']}'s hand: {', '.join(dealer_hand)}")
+      

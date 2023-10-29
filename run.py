@@ -20,6 +20,5 @@ if __name__ == "__main__":
     
     # my_deck.display_deck()
     
-    hand = functions.display_hand(player, dealer)
+    functions.display_hand(player, dealer)
 
-print(hand)

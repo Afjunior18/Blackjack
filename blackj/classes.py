@@ -29,5 +29,5 @@ class Deck:
             print(f"{card.value} of {card.suit}")
             
     def draw_card(self):
-        return random.choice(self.cards) 
+        return random.choice(self.cards)
         
