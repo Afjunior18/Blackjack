@@ -64,7 +64,7 @@ def rules_blackjack():
           "A = 1\n")
     
     
-# Clear terminal -----------------------------------------------------------------------------------------------
+# Clear terminal ---------------------------------------------------------------------------------------
 
 def clear_terminal():
     """
@@ -72,7 +72,7 @@ def clear_terminal():
     """
     os.system("cls" if os.name == "nt" else "clear")
 
-# Menu rules/start game -----------------------------------------------------------------------------------------------
+# Menu rules/start game --------------------------------------------------------------------------------
 
 def menu():
     """
@@ -94,14 +94,14 @@ def menu():
         else:
             print("Invalid Choice: Please choose '1' or '2'")
             
-# Deal cards and Function Create players --------------------------------------------------------------------------------------------
+# Deal cards and Function Create players ---------------------------------------------------------------
 
 def deal_cards(my_deck):
     """
     Function to deal two cards from the deck.
     Return a list containing two cards dealt from the deck.
     """
-    return [str(my_deck.draw_card()), str(my_deck.draw_card())]
+    return [my_deck.draw_card(), my_deck.draw_card()]
 
 def create_players(player_name, my_deck):
     player = {'name': player_name, 
@@ -110,3 +110,26 @@ def create_players(player_name, my_deck):
               'hand': [my_deck.draw_card(), my_deck.draw_card()]}
     
     return player, dealer
+
+# Convert Card value to int ----------------------------------------------------------------------------
+
+def card_value_to_int(card_value):
+    """
+    Function to convert str card_value to int
+    """
+    if card_value.isdigit():
+        return int(card_value)
+    else:
+        if card_value == 'Jack':
+            return 10
+        elif card_value == 'Queen':
+            return 10
+        elif card_value == "King":
+            return 10
+        elif card_value == 'Ace':
+            return 1
+        elif card_value == '10':
+            return 10
+        else:
+            return 0
+        
