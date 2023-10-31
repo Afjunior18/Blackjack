@@ -1,5 +1,6 @@
 from blackj.deck import Deck
 from blackj.deck import Card
+from blackj.utilities import card_value_to_int
 
 # Function Create players --------------------------------------------------------------------------
 
@@ -38,7 +39,7 @@ def stand_or_hit(player, my_deck):
     If Stand is chosen, player keep with his hand and is dealer's turn.
     """
     while True:
-        choice = input(f"{player['name']}, Do you want to STAND (s) or HIT (h)?\n")
+        choice = input(f"\n\n{player['name']}, Do you want to STAND (s) or HIT (h)?\n")
         if choice == 's':
             break
         elif choice == 'h':
@@ -77,7 +78,7 @@ def card_value_to_int(card_value):
         elif card_value == "King":
             return 10
         elif card_value == 'Ace':
-            return 11
+            return 1
         elif card_value == '10':
             return 10
         else:
@@ -91,7 +92,7 @@ def calculate_points(hand):
     Function to calculate player's hand
     """
     player_points = 0
-    for card in hand:
-        player_points += card_value_to_int(card[0])
+    for card_value, _ in hand:
+        player_points += card_value_to_int(card_value)
     
     return player_points
