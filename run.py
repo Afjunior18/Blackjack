@@ -14,7 +14,7 @@ def main():
     player, dealer = create_players(player_name, my_deck)
     menu()
     display_hand(player, dealer)
-    stand_or_hit(player, dealer)
+    stand_or_hit(player, my_deck)
 
 
 if __name__ == "__main__":

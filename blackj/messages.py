@@ -56,4 +56,4 @@ def rules_blackjack():
           "J = 10\n"
           "Q = 10\n"
           "K = 10\n"
-          "A = 1\n")
+          "A = 11\n")

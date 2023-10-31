@@ -1,3 +1,6 @@
+from blackj.deck import Deck
+from blackj.deck import Card
+
 # Function Create players --------------------------------------------------------------------------
 
 def create_players(player_name, my_deck):
@@ -57,3 +60,38 @@ def display_hand(player, dealer):
 
     print(f"\n{player['name']}'s hand: {', '.join(player_hand)}\n\n")
     print(f"{dealer['name']}'s hand: {', '.join(dealer_hand)}")
+    
+# Convert Card value to int ----------------------------------------------------------------
+
+def card_value_to_int(card_value):
+    """
+    Function to convert str card_value to int
+    """
+    if card_value.isdigit():
+        return int(card_value)
+    else:
+        if card_value == 'Jack':
+            return 10
+        elif card_value == 'Queen':
+            return 10
+        elif card_value == "King":
+            return 10
+        elif card_value == 'Ace':
+            return 11
+        elif card_value == '10':
+            return 10
+        else:
+            return 0
+
+    
+# Calculate the point --------------------------------------------------------------------------
+
+def calculate_points(hand):
+    """
+    Function to calculate player's hand
+    """
+    player_points = 0
+    for card in hand:
+        player_points += card_value_to_int(card[0])
+    
+    return player_points
