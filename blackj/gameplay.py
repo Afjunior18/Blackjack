@@ -48,7 +48,7 @@ def stand_or_hit(player, my_deck):
             print(f"\n{player['name']}: {player['hand']}\n")
             player_sum = calculate_points(player['hand'])
             if player_sum > 21:
-                return "Boom YOU BURST!!... dealer's turn..."
+                return "\nBoom YOU BURST!!... dealer's turn..."
         else:
             print("Invalid input, please (s) for stand or (h) for hit")
 
@@ -70,15 +70,15 @@ def dealer_turn(dealer, my_deck):
 
 def show_winner(player_score, dealer_score):
     if player_score > 21 and dealer_score > 21:
-        return "Booom!! You both burst"
+        return "\nBooom!! You both burst"
     elif player_score > 21:
-        return "Booom!! You burst... DEALER WINS!"
+        return "\nBooom!! You burst... DEALER WINS!"
     elif dealer_score > 21:
-        return "Booom!! Dealer burst... YOU WIN!"
+        return "\nBooom!! Dealer burst... YOU WIN!"
     elif player_score < dealer_score:
-        return "DEALER WINS!"
+        return "\nDEALER WINS!"
     elif player_score > dealer_score:
-        return "YOU WIN!"
+        return "\nYOU WIN!"
     else:
         return "It's a tie!"
 
