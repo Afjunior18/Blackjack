@@ -5,7 +5,7 @@ from blackj.menu import menu
 from blackj.gameplay import create_players, deal_cards, stand_or_hit, display_hand
 from blackj.deck import Deck
 from blackj.utilities import card_value_to_int, clear_terminal
-from blackj.gameplay import calculate_points
+from blackj.gameplay import calculate_points, dealer_turn
 
 init(autoreset=True)
 
@@ -19,10 +19,14 @@ def main():
     stand_or_hit(player, my_deck)
         
     player_score = calculate_points(player['hand'])
+    
+    print("\nDEALER'S TURN!")    
+    dealer_turn(dealer, my_deck)
+    
     dealer_score = calculate_points(dealer['hand'])
     
-    print(f"\nPlayer's Score: {player_score}")
-    print(f"Dealer's Score: {dealer_score}")
+    print(f"\nPlayer's Score: {player_score} points")
+    print(f"Dealer's Score: {dealer_score} points")
 
 
 if __name__ == "__main__":

@@ -54,16 +54,14 @@ def stand_or_hit(player, my_deck):
 def dealer_turn(dealer, my_deck):
     """
     Function dealer turn.
-    while loop for hit a new card until get =< 17 points
+    while loop for hit a new card until get <= 17 points
     """
-    while calculate_points(dealer['hand']) =< 17:
+    while calculate_points(dealer['hand']) <= 17:
         draw_card = my_deck.draw_card()
-        dealer['hand'].append.my_deck((draw_card.value, draw_card.suit))
+        dealer['hand'].append((draw_card.value, draw_card.suit))
+        print(f"\nDealer drew: {draw_card.value} of {draw_card.suit}")
     
     return dealer
-
-
-
 
 # Display player's hand and dealer's hand -----------------------------------------------
 
@@ -74,7 +72,7 @@ def display_hand(player, dealer):
     player_hand = [f"{card} of {suit}" for card, suit in player['hand']]
     dealer_hand = [f"{card} of {suit}" for card, suit in dealer['hand']]
 
-    print(f"\n{player['name']}'s hand: {', '.join(player_hand)}\n\n")
+    print(f"\n{player['name']}'s hand: {', '.join(player_hand)}\n")
     print(f"{dealer['name']}'s hand: {', '.join(dealer_hand)}")
 
 # Calculate the point -------------------------------------------------------------------
