@@ -63,6 +63,22 @@ def dealer_turn(dealer, my_deck):
     
     return dealer
 
+# Function to show the winner ------------------------------------------------------
+
+def show_winner(player_score, dealer_score):
+    if player_score > 21 and dealer_score > 21:
+        return "Booom!! You both burst"
+    elif player_score > 21:
+        return "Booom!! You burst... DEALER WINS!"
+    elif dealer_score > 21:
+        return "Booom!! Dealer burst... YOU WIN!"
+    elif player_score < dealer_score:
+        return "DEALER WINS!"
+    elif player_score > dealer_score:
+        return "YOU WIN!"
+    else:
+        return "It's a tie!"
+
 # Display player's hand and dealer's hand -----------------------------------------------
 
 def display_hand(player, dealer):
