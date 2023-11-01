@@ -23,12 +23,11 @@ class Deck:
         suits = ['\u2665', '\u2666', '\u2663', '\u2660']
         values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace']
         self.cards = [Card(value, suit) for suit in suits for value in values]
-    
+
     def display_deck(self):
         for card in self.cards:
             print(f"{card.value} of {card.suit}")
-            
+        
     def draw_card(self):
         return random.choice(self.cards)
     
-    ## test

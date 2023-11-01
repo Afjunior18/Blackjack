@@ -24,7 +24,7 @@ def card_value_to_int(card_value):
         elif card_value == "King":
             return 10
         elif card_value == 'Ace':
-            return 1
+            return 11
         elif card_value == '10':
             return 10
         else:

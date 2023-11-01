@@ -2,7 +2,7 @@ from blackj.deck import Deck
 from blackj.deck import Card
 from blackj.utilities import card_value_to_int
 
-# Function Create players --------------------------------------------------------------------------
+# Function Create players ---------------------------------------------------------------
 
 def create_players(player_name, my_deck):
     """
@@ -20,7 +20,7 @@ def create_players(player_name, my_deck):
     
     return player, dealer
 
-# Deal cards and Function Create players -----------------------------------------------------------
+# Deal cards and Function Create players ------------------------------------------------
 
 def deal_cards(my_deck):
     """
@@ -30,7 +30,7 @@ def deal_cards(my_deck):
     return [my_deck.draw_card(), my_deck.draw_card()]
 
 
-# Stand or Hit function -----------------------------------------------------------------------------
+# Stand or Hit function -----------------------------------------------------------------
 
 def stand_or_hit(player, my_deck):
     """
@@ -49,43 +49,35 @@ def stand_or_hit(player, my_deck):
         else:
             print("Invalid input, please (s) for stand or (h) for hit")
 
-# Display player's hand and dealer's hand -----------------------------------------------------------
+# Dealer's turn--------------------------------------------------------------------------
+
+def dealer_turn(dealer, my_deck):
+    """
+    Function dealer turn.
+    while loop for hit a new card until get =< 17 points
+    """
+    while calculate_points(dealer['hand']) =< 17:
+        draw_card = my_deck.draw_card()
+        dealer['hand'].append.my_deck((draw_card.value, draw_card.suit))
+    
+    return dealer
+
+
+
+
+# Display player's hand and dealer's hand -----------------------------------------------
 
 def display_hand(player, dealer):
     """
     Display player and dealer hands
     """
-
     player_hand = [f"{card} of {suit}" for card, suit in player['hand']]
     dealer_hand = [f"{card} of {suit}" for card, suit in dealer['hand']]
 
     print(f"\n{player['name']}'s hand: {', '.join(player_hand)}\n\n")
     print(f"{dealer['name']}'s hand: {', '.join(dealer_hand)}")
-    
-# Convert Card value to int ----------------------------------------------------------------
 
-def card_value_to_int(card_value):
-    """
-    Function to convert str card_value to int
-    """
-    if card_value.isdigit():
-        return int(card_value)
-    else:
-        if card_value == 'Jack':
-            return 10
-        elif card_value == 'Queen':
-            return 10
-        elif card_value == "King":
-            return 10
-        elif card_value == 'Ace':
-            return 1
-        elif card_value == '10':
-            return 10
-        else:
-            return 0
-
-    
-# Calculate the point --------------------------------------------------------------------------
+# Calculate the point -------------------------------------------------------------------
 
 def calculate_points(hand):
     """
