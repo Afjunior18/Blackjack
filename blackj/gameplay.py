@@ -46,6 +46,9 @@ def stand_or_hit(player, my_deck):
             drawn_card = my_deck.draw_card()
             player['hand'].append((drawn_card.value, drawn_card.suit))
             print(f"\n{player['name']}: {player['hand']}\n")
+            player_sum = calculate_points(player['hand'])
+            if player_sum > 21:
+                return "Boom YOU BURST!!... dealer's turn..."
         else:
             print("Invalid input, please (s) for stand or (h) for hit")
 
