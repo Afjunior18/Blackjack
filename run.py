@@ -29,44 +29,49 @@ def main():
         
         player, dealer = create_players(player_name, my_deck)
         
-        # menu() # start the game ou check the rules
-        
+        print("\nBlack Jack Game!!!")
+        print("-------------------------------------------------------------------------")
         display_hand(player, dealer) # function so show up player and dealer objects with initial cards
         
         stand_or_hit(player, dealer, my_deck) # plyer's turn, has to decide if Stand or Hit a new card
         
         player_score = calculate_points(player['hand']) # calculate the player's score
         
-        print("\n-------------------------- DEALER'S TURN!!! --------------------------")
+        print("\n--------------------------- DEALER'S TURN!!! ----------------------------")
         
         dealer_turn(dealer, my_deck) # Function to call dealer's turn
         
         dealer_score = calculate_points(dealer['hand'])
         
         print(f"\nPlayer's score: {player_score} points")
-        print(f"Dealer's score: {dealer_score} points")        
+        print(f"Dealer's score: {dealer_score} points")
+        print("-------------------------------------------------------------------------")     
         
         winner_result = show_winner(player_score, dealer_score)
         
         print(winner_result)
+        print("-------------------------------------------------------------------------")
     
         if "Player" in winner_result:
             player_points += 1
         elif "Dealer" in winner_result:
             dealer_points += 1
     
-    print("\nGame Over - The wninner is: ")
-    print(f"\nPlayer's total score: {player_points}")
-    print(f"Dealer's total score: {dealer_points}")
+        print("\nGame Over - The wninner is: ")
+        print(f"\nPlayer's total score: {player_points}")
+        print(f"Dealer's total score: {dealer_points}")
     
-    print("\n------------- The WINNER IS: --------------")
+    print("\n-------------------------- The WINNER IS: -------------------------------")
     
     if player_points > dealer_points:
         print("\nCongrats! You're the WINNER")
+        print("-------------------------------------------------------------------------")
     elif player_points == dealer_points:
         print("\nIt's a tie!")
+        print("-------------------------------------------------------------------------")
     else:
         print("\nYou Lose!! DEALER WINS...")
+        print("-------------------------------------------------------------------------")
 
 
 

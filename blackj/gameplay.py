@@ -1,7 +1,7 @@
 from blackj.deck import Deck
 from blackj.deck import Card
 
-# Function Create players ---------------------------------------------------------------
+# Function Create players ------------------------------------------------
 
 def create_players(player_name, my_deck):
     """
@@ -19,7 +19,7 @@ def create_players(player_name, my_deck):
     
     return player, dealer
 
-# Deal cards and Function Create players ------------------------------------------------
+# Deal cards and Function Create players ----------------------------------
 
 def deal_cards(my_deck):
     """
@@ -51,7 +51,7 @@ def card_value_to_int(card_value):
             return 0
 
 
-# Stand or Hit function -----------------------------------------------------------------
+# Stand or Hit function ------------------------------------------------------------
 
 def stand_or_hit(player, dealer, my_deck):
     """
@@ -71,10 +71,12 @@ def stand_or_hit(player, dealer, my_deck):
             player_sum = calculate_points(player['hand'])
             if player_sum > 21:
                 return "\nBoom YOU BURST!!... dealer's turn..."
+            elif player_sum == 21:
+                return "\n You've got 21 points! dealer's turn"
         else:
             print("Invalid input, please (s) for stand or (h) for hit")
 
-# Dealer's turn--------------------------------------------------------------------------
+# Dealer's turn-----------------------------------------------------------------------
 
 def dealer_turn(dealer, my_deck):
     """
@@ -87,7 +89,7 @@ def dealer_turn(dealer, my_deck):
         print(f"\nDealer drew: {draw_card.value} of {draw_card.suit}")
     return dealer
 
-# Function to show the winner ------------------------------------------------------
+# Function to show the winner --------------------------------------------------------
 
 def show_winner(player_score, dealer_score):
     """
@@ -95,17 +97,23 @@ def show_winner(player_score, dealer_score):
     Display a message indicating the outcome of the game.
     """
     if player_score > 21 and dealer_score > 21:
+        print("-------------------------------------------------------------------------")
         return "\nBooom!! You both burst\n"
     elif player_score > 21:
+        print("-------------------------------------------------------------------------")
         return "\nBooom!! You burst... DEALER WINS!\n"
     elif dealer_score > 21:
+        print("-------------------------------------------------------------------------")
         return "\nBooom!! Dealer burst... YOU WIN!\n"
     elif player_score < dealer_score:
+        print("-------------------------------------------------------------------------")
         return "\nDEALER WINS!\n"
     elif player_score > dealer_score:
+        print("-------------------------------------------------------------------------")
         return "\nYOU WIN!\n"
     else:
-        return "It's a tie!"
+        print("-------------------------------------------------------------------------")
+        return "\nIt's a tie!"
 
 # Display player's hand and dealer's hand -----------------------------------------------
 

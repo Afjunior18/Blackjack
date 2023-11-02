@@ -1,11 +1,12 @@
-# Welcome message -------------------------------------------------------------------------------------
+# Welcome message ---------------------------------------------------------------------------------
 
 def welcome_message():
     """
     Display a welcome message and prompt the player for their name.
     Ensure that the input is valid (letters only) and return the formatted name.
     """
-    print("Blackjack Game!\n")
+    print("Blackjack Game!")
+    print("-------------------------------------------------------------------------\n")
     while True:
         try:
             name = input("What is your player's name?\n")
@@ -17,10 +18,10 @@ def welcome_message():
         except ValueError as e:
             print(e)
         else:
-            print(f"\nWelcome {name} to the Blackjack Game!\nLet's have fun...\n")
+            print(f"\nWelcome {name} to the Blackjack Game!\n\n")
             return name
 
-# Rules ------------------------------------------------------------------------------------------------
+# Rules ------------------------------------------------------------------------------------------
 
 def rules_blackjack():
     """
