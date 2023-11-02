@@ -7,7 +7,8 @@ def menu():
     Display menu options and handle user's choice.
     """
     while True:
-        print("Would you like to check the GAME RULES, press (1) or START GAME press (2)?\n")
+        print("Would you like to check the GAME RULES, press (1) or START GAME press (2)?")
+        print("__________________________________________________________________________")
         start_game = 2
         rules_game = 1
     
@@ -21,3 +22,4 @@ def menu():
             break
         else:
             print("Invalid Choice: Please choose '1' or '2'")
+            

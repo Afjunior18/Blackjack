@@ -63,7 +63,7 @@ def main():
         
         player_score = calculate_points(player['hand']) # calculate the player's score
         
-        print("--------------- DEALER'S TURN!!! ---------------")
+        print("\n-------------------------- DEALER'S TURN!!! --------------------------")
         
         dealer_turn(dealer, my_deck) # Function to call dealer's turn
         

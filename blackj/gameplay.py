@@ -60,7 +60,8 @@ def stand_or_hit(player, dealer, my_deck):
     If Stand is chosen, player keep with his hand and is dealer's turn.
     """
     while True:
-        choice = input(f"\n\n{player['name']}, Do you want to STAND (s) or HIT (h)?\n")
+        choice = input(f"\n\n{player['name']}, Do you want to STAND (s) or HIT (h)?")
+        print("_____________________________________________________________________")
         if choice == 's':
             break
         elif choice == 'h':
@@ -94,15 +95,15 @@ def show_winner(player_score, dealer_score):
     Display a message indicating the outcome of the game.
     """
     if player_score > 21 and dealer_score > 21:
-        return "\nBooom!! You both burst"
+        return "\nBooom!! You both burst\n"
     elif player_score > 21:
-        return "\nBooom!! You burst... DEALER WINS!"
+        return "\nBooom!! You burst... DEALER WINS!\n"
     elif dealer_score > 21:
-        return "\nBooom!! Dealer burst... YOU WIN!"
+        return "\nBooom!! Dealer burst... YOU WIN!\n"
     elif player_score < dealer_score:
-        return "\nDEALER WINS!"
+        return "\nDEALER WINS!\n"
     elif player_score > dealer_score:
-        return "\nYOU WIN!"
+        return "\nYOU WIN!\n"
     else:
         return "It's a tie!"
 
