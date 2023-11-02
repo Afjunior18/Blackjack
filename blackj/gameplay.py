@@ -16,7 +16,7 @@ def create_players(player_name, my_deck):
     
     player['hand'] = [(card.value, card.suit) for card in player['hand']]
     dealer['hand'] = [(card.value, card.suit) for card in dealer['hand']]
-    
+
     return player, dealer
 
 # Deal cards and Function Create players ----------------------------------
@@ -75,6 +75,7 @@ def stand_or_hit(player, dealer, my_deck):
                 return "\n You've got 21 points! dealer's turn"
         else:
             print("Invalid input, please (s) for stand or (h) for hit")
+    
 
 # Dealer's turn-----------------------------------------------------------------------
 
@@ -98,13 +99,13 @@ def show_winner(player_score, dealer_score):
     """
     if player_score > 21 and dealer_score > 21:
         print("-------------------------------------------------------------------------")
-        return "\nBooom!! You both burst\n"
+        return "\nYou both bust\n"
     elif player_score > 21:
         print("-------------------------------------------------------------------------")
-        return "\nBooom!! You burst... DEALER WINS!\n"
+        return "\nYou bust... DEALER WINS!\n"
     elif dealer_score > 21:
         print("-------------------------------------------------------------------------")
-        return "\nBooom!! Dealer burst... YOU WIN!\n"
+        return "\nDealer bust... YOU WIN!\n"
     elif player_score < dealer_score:
         print("-------------------------------------------------------------------------")
         return "\nDEALER WINS!\n"
@@ -138,3 +139,17 @@ def calculate_points(hand):
         player_points += card_value_to_int(card_value)
     
     return player_points
+
+# Calculate final winner after 5 rounds ---------------------------------------------------
+
+def result_final_winner(player_points, dealer_points):
+    """
+    """
+    if player_points > dealer_points:
+        return "Player"
+    elif player_points < dealer_points:
+        return "Dealer"
+    else:
+        return "Its a tie"
+        
+    

@@ -6,6 +6,7 @@ from blackj.gameplay import create_players, deal_cards, stand_or_hit, display_ha
 from blackj.deck import Deck
 from blackj.utilities import clear_terminal
 from blackj.gameplay import card_value_to_int, calculate_points, dealer_turn, show_winner
+from blackj.gameplay import result_final_winner
 
 init(autoreset=True)
 
@@ -56,25 +57,28 @@ def main():
             player_points += 1
         elif "Dealer" in winner_result:
             dealer_points += 1
+        
+        if total_round == 5:
+            break
+        
+        final_winner = result_final_winner(player_points, dealer_points)
+        
     
-        print("\nGame Over - The wninner is: ")
-        print(f"\nPlayer's total score: {player_points}")
-        print(f"Dealer's total score: {dealer_points}")
+    print(f"\nPlayed a total of: {total_round} rounds.\n")
     
     print("\n-------------------------- The WINNER IS: -------------------------------")
     
-    if player_points > dealer_points:
-        print("\nCongrats! You're the WINNER")
+    if final_winner == "Player":
+        print("\nYou're the WINNER!!")
         print("-------------------------------------------------------------------------")
-    elif player_points == dealer_points:
-        print("\nIt's a tie!")
+    elif final_winner == "Dealer":
+        print("\nYou Lose!! DEALER WINS...")
         print("-------------------------------------------------------------------------")
     else:
-        print("\nYou Lose!! DEALER WINS...")
+        print("\nIt's a tie!...")
         print("-------------------------------------------------------------------------")
 
 
 
 if __name__ == "__main__":
-
     main()
