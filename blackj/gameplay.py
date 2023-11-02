@@ -53,7 +53,7 @@ def card_value_to_int(card_value):
 
 # Stand or Hit function -----------------------------------------------------------------
 
-def stand_or_hit(player, dealer):
+def stand_or_hit(player, dealer, my_deck):
     """
     Function to handle the player's turn. Choice between Stand (s) or Hit (h)
     If HIT is chosen, a card is drawn and added to the player's hand.
