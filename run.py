@@ -4,19 +4,23 @@ from blackj.messages import welcome_message, rules_blackjack
 from blackj.menu import menu
 from blackj.gameplay import create_players, deal_cards, stand_or_hit, display_hand
 from blackj.deck import Deck
-from blackj.utilities import card_value_to_int, clear_terminal
-from blackj.gameplay import calculate_points, dealer_turn, show_winner
+from blackj.utilities import clear_terminal
+from blackj.gameplay import card_value_to_int, calculate_points, dealer_turn, show_winner
 
 init(autoreset=True)
 
 def main():
     my_deck = Deck()
+    
     player_name = welcome_message()
+    
     player, dealer = create_players(player_name, my_deck)
+    
     menu()
+    
     display_hand(player, dealer)
     
-    stand_or_hit(player, my_deck)
+    stand_or_hit(player, dealer)
         
     player_score = calculate_points(player['hand'])
     

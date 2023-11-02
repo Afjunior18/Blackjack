@@ -1,6 +1,5 @@
 from blackj.deck import Deck
 from blackj.deck import Card
-from blackj.utilities import card_value_to_int
 
 # Function Create players ---------------------------------------------------------------
 
@@ -29,10 +28,32 @@ def deal_cards(my_deck):
     """
     return [my_deck.draw_card(), my_deck.draw_card()]
 
+# Convert str card_value to int --------------------------------------------
+
+def card_value_to_int(card_value):
+    """
+    Function to convert str card_value to int
+    """
+    if card_value.isdigit():
+        return int(card_value)
+    else:
+        if card_value == 'Jack':
+            return 10
+        elif card_value == 'Queen':
+            return 10
+        elif card_value == "King":
+            return 10
+        elif card_value == 'Ace':
+            return 11
+        elif card_value == '10':
+            return 10
+        else:
+            return 0
+
 
 # Stand or Hit function -----------------------------------------------------------------
 
-def stand_or_hit(player, my_deck):
+def stand_or_hit(player, dealer):
     """
     Function to handle the player's turn. Choice between Stand (s) or Hit (h)
     If HIT is chosen, a card is drawn and added to the player's hand.
@@ -63,12 +84,15 @@ def dealer_turn(dealer, my_deck):
         draw_card = my_deck.draw_card()
         dealer['hand'].append((draw_card.value, draw_card.suit))
         print(f"\nDealer drew: {draw_card.value} of {draw_card.suit}")
-    
     return dealer
 
 # Function to show the winner ------------------------------------------------------
 
 def show_winner(player_score, dealer_score):
+    """
+    Determines the winner of the game based on player and dealer scores.
+    Display a message indicating the outcome of the game.
+    """
     if player_score > 21 and dealer_score > 21:
         return "\nBooom!! You both burst"
     elif player_score > 21:
