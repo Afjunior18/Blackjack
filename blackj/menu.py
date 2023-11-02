@@ -7,19 +7,20 @@ def menu():
     Display menu options and handle user's choice.
     """
     while True:
-        print("Would you like to check the GAME RULES, press (1) or START GAME press (2)?")
-        print("__________________________________________________________________________")
-        start_game = 2
-        rules_game = 1
-    
+        print("\n------- Game Menu -------")
+        print("\n1 - Rules")
+        print("\n2 - Start the game")
+        print("\n3 - Exit\n")
+        
         choice = input("Enter your choice: ")
-    
+        
         if choice == "1":
             rules_blackjack()
-            break
         elif choice == "2":
             pass
             break
+        elif choice == "3":
+            exit()
         else:
-            print("Invalid Choice: Please choose '1' or '2'")
+            print("Invalid Choice: Please choose '1', '2' or '3'")
             

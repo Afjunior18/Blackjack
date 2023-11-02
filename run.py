@@ -9,35 +9,11 @@ from blackj.gameplay import card_value_to_int, calculate_points, dealer_turn, sh
 
 init(autoreset=True)
 
-"""
-def main():
-    
-    my_deck = Deck()
-    
-    player_name = welcome_message()
-    
-    player, dealer = create_players(player_name, my_deck)
-    
-    menu()
-    
-    display_hand(player, dealer)
-    
-    stand_or_hit(player, dealer, my_deck)
-        
-    player_score = calculate_points(player['hand'])
-    
-    print("\nDEALER'S TURN!")    
-    dealer_turn(dealer, my_deck)
-    
-    dealer_score = calculate_points(dealer['hand'])
-    
-    print(f"\nPlayer's Score: {player_score} points")
-    print(f"Dealer's Score: {dealer_score} points")
-    
-    winner_result = show_winner(player_score, dealer_score) 
-    print(winner_result)
-"""
 
+
+menu()
+clear_terminal()
+player_name = welcome_message()
 
 def main():
     """
@@ -47,15 +23,13 @@ def main():
     player_points = 0
     dealer_points = 0
     
-    player_name = welcome_message()
-    
     while total_round < 5: # total rounds 
         total_round += 1 
         my_deck = Deck() # create a deck of cards (from my class Deck)
         
         player, dealer = create_players(player_name, my_deck)
         
-        menu() # start the game ou check the rules
+        # menu() # start the game ou check the rules
         
         display_hand(player, dealer) # function so show up player and dealer objects with initial cards
         
