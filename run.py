@@ -73,18 +73,19 @@ def main():
         print(f"Dealer's score: {dealer_score} points")        
         
         winner_result = show_winner(player_score, dealer_score)
+        
         print(winner_result)
     
-    if "Player" in winner_result:
-        player_points += 1
-    elif "Dealer" in winner_result:
-        dealer_points += 1
+        if "Player" in winner_result:
+            player_points += 1
+        elif "Dealer" in winner_result:
+            dealer_points += 1
     
     print("\nGame Over - The wninner is: ")
     print(f"\nPlayer's total score: {player_points}")
     print(f"Dealer's total score: {dealer_points}")
     
-    print("------------- The WINNER IS: --------------")
+    print("\n------------- The WINNER IS: --------------")
     
     if player_points > dealer_points:
         print("\nCongrats! You're the WINNER")

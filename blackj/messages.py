@@ -6,22 +6,19 @@ def welcome_message():
     Ensure that the input is valid (letters only) and return the formatted name.
     """
     print("Blackjack Game!\n")
-    try:
-        name = input("What is your player's name?\n")
-        name = name.capitalize()
-        if not name.isalpha():
-            raise ValueError("Invalid input, Please enter letters only\n")
-    except ValueError as e:
-        print(e)
-        while True:
-            name = input("Please enter your name, 'letters only'\n")
+    while True:
+        try:
+            name = input("What is your player's name?\n")
             name = name.capitalize()
-            if name.isalpha():
-                break
-    else:
-        print(f"\nWelcome {name} to the Blackjack Game!\nLet's have fun...\n")
-
-    return name
+            if not name.isalpha():
+                raise ValueError("Invalid input, Please enter letters only\n")
+            if len(name) >= 15:
+                raise ValueError("\nName to long, please enter a short name.(No more than 15 caracteres)")
+        except ValueError as e:
+            print(e)
+        else:
+            print(f"\nWelcome {name} to the Blackjack Game!\nLet's have fun...\n")
+            return name
 
 # Rules ------------------------------------------------------------------------------------------------
 
