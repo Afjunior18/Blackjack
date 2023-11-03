@@ -78,10 +78,12 @@ def main():
         print(f"Tie: {tie_round}")
         print("-------------------------------------------------------------------------")
     
+    clear_terminal()
+    
     final_winner = result_final_winner(player_round, dealer_round)
     print(f"\nPlayer wins: Total of {player_round} rounds.")
     print(f"Dealer wins: Total of {dealer_round} rounds.")
-    print(f"Tie: Total of {tie_round}\n")
+    print(f"Tie: Total of {tie_round}.\n")
     
     time.sleep(4)
     print("\n-------------------------- The WINNER IS: -------------------------------")

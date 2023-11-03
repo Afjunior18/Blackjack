@@ -66,12 +66,14 @@ def stand_or_hit(player, dealer, my_deck):
         elif choice == 'h':
             drawn_card = my_deck.draw_card()
             player['hand'].append((drawn_card.value, drawn_card.suit))
-            print(f"\n{player['name']}: {player['hand']}\n")
+            print(f"\n{player['name']}, You drawn: {drawn_card.value} of {drawn_card.suit}\n")
             player_sum = calculate_points(player['hand'])
             if player_sum > 21:
-                return "\nBoom YOU BUST!!... dealer's turn..."
+                print("\nYOU BUST!!... dealer's turn...")
+                return
             elif player_sum == 21:
-                return "\n You've got 21 points! dealer's turn"
+                print("\n You've got 21 points! dealer's turn")
+                return
         else:
             print("Invalid input, please (s) for stand or (h) for hit")
     
