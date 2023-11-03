@@ -140,6 +140,18 @@ def display_hand(player, dealer):
     print(f"\n{player['name']}'s hand: {', '.join(player_hand)}\n")
     print(f"{dealer['name']}'s hand: {', '.join(dealer_hand)}")
 
+# Function to count Aces in the player's hand--------------------------------------------
+
+def count_ace(hand):
+    """
+    """
+    ace_count = 0
+    for card in hand:
+        if card[0] == 'Ace':
+            ace_count += 1
+    
+    return ace_count
+
 # Calculate the point -------------------------------------------------------------------
 
 def calculate_points(hand):
