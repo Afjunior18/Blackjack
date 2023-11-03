@@ -152,19 +152,6 @@ def display_hand(player, dealer):
     print(f"\n{player['name']}'s hand: {', '.join(player_hand)}\n")
     print(f"{dealer['name']}'s hand: {', '.join(dealer_hand)}")
 
-# Function to count Aces in the player's hand--------------------------------------------
-
-"""
-def count_aces(hand):
-
-    ace_count = 0
-    for card in hand:
-        if card[0] == 'Ace':
-            ace_count += 1
-    
-    return ace_count
-"""
-
 # Calculate the point -------------------------------------------------------------------
 
 def calculate_points(hand):
@@ -172,13 +159,9 @@ def calculate_points(hand):
     Function to calculate player's hand
     """
     player_points = 0
-    # num_aces = count_aces(hand)
     
     for card_value, _ in hand:
         player_points += card_value_to_int(card_value)
-    
-    # while player_points > 21 and num_aces > 0:
-        # player_points -= 10
     
     return player_points
 

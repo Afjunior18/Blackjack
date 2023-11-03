@@ -1,4 +1,5 @@
 from blackj.messages import welcome_message, rules_blackjack
+from blackj.utilities import clear_terminal
 
 # Menu rules/start game --------------------------------------------------------------------------------
 
@@ -7,14 +8,14 @@ def menu():
     Display menu options and handle user's choice.
     """
     while True:
-        print("\n------- Game Menu -------")
-        print("\n1 - Rules")
-        print("\n2 - Start the game")
-        print("\n3 - Exit\n")
+        print("-------------------------------- Game Rules -------------------------------------")
+        print("\n     1 - Rules              2 - Start the game             3 - Exit             ")
+        print("----------------------------------------------------------------------------------")
         
         choice = input("Enter your choice: ")
         
         if choice == "1":
+            clear_terminal()
             rules_blackjack()
         elif choice == "2":
             pass
