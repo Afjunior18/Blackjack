@@ -8,6 +8,8 @@ from blackj.utilities import clear_terminal
 from blackj.gameplay import card_value_to_int, calculate_points, dealer_turn, show_winner
 from blackj.gameplay import result_final_winner
 
+import time
+
 init(autoreset=True)
 
 
@@ -45,15 +47,16 @@ def main():
         
         player_score = calculate_points(player['hand']) # calculate the player's score
         
-        print("\n--------------------------- DEALER'S TURN!!! ----------------------------")
+        print("\nDEALER'S TURN!!!----------------------------------------------------------")
+        time.sleep(4)
         
         dealer_turn(dealer, my_deck) # Function to call dealer's turn
         
         dealer_score = calculate_points(dealer['hand'])
         
         print(f"\nPlayer's score: {player_score} points")
-        print(f"Dealer's score: {dealer_score} points")
-        print("-------------------------------------------------------------------------")     
+        print(f"Dealer's score: {dealer_score} points")    
+        time.sleep(4)
         
         winner_result = show_winner(player_score, dealer_score)
         
@@ -65,17 +68,22 @@ def main():
         elif "DEALER WINS" in winner_result:
             dealer_round += 1
         
+        time.sleep(3)
         print(f"Player round: {player_round}")
         print(f"Dealer round: {dealer_round}")
-    
+        print("-------------------------------------------------------------------------")
+        
+        time.sleep(3)    
         print(f"\nPlayed a total of: {total_round} rounds.\n")
     
     final_winner = result_final_winner(player_round, dealer_round)
     print(f"\nPlayer wins: Total of {player_round} rounds.")
     print(f"Dealer wins: Total of {dealer_round} rounds.\n")
     
+    time.sleep(4)
     print("\n-------------------------- The WINNER IS: -------------------------------")
     
+    time.sleep(4)
     if final_winner == "Player":
         print("\nYou're the WINNER!!")
         print("-------------------------------------------------------------------------")
