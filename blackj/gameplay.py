@@ -17,6 +17,18 @@ def create_players(player_name, my_deck):
     
     player['hand'] = [(card.value, card.suit) for card in player['hand']]
     dealer['hand'] = [(card.value, card.suit) for card in dealer['hand']]
+    
+    #Check if player or dealer starts with 22 points (two Aces)
+     
+    if calculate_points(player['hand']) == 22:
+        # Replace one Ace with a new card
+        player['hand'] = [card for card in player['hand'] if card[0] != 'Ace']
+        player['hand'].append((my_deck.draw_card().value, my_deck.draw_card().suit))
+        
+    if calculate_points(dealer['hand']) == 22:
+        # Replace one Ace with a new card
+        dealer['hand'] = [card for card in dealer['hand'] if card[0] != 'Ace']
+        dealer['hand'].append((my_deck.draw_card().value, my_deck.draw_card().suit))
 
     return player, dealer
 
@@ -142,15 +154,16 @@ def display_hand(player, dealer):
 
 # Function to count Aces in the player's hand--------------------------------------------
 
-def count_ace(hand):
-    """
-    """
+"""
+def count_aces(hand):
+
     ace_count = 0
     for card in hand:
         if card[0] == 'Ace':
             ace_count += 1
     
     return ace_count
+"""
 
 # Calculate the point -------------------------------------------------------------------
 
@@ -159,8 +172,13 @@ def calculate_points(hand):
     Function to calculate player's hand
     """
     player_points = 0
+    # num_aces = count_aces(hand)
+    
     for card_value, _ in hand:
         player_points += card_value_to_int(card_value)
+    
+    # while player_points > 21 and num_aces > 0:
+        # player_points -= 10
     
     return player_points
 
