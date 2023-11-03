@@ -18,7 +18,7 @@ def welcome_message():
         except ValueError as e:
             print(e)
         else:
-            print(f"\nWelcome {name} to the Blackjack Game!\n\n")
+            print(f"Welcome {name} to the Blackjack Game!\n")
             return name
 
 # Rules ------------------------------------------------------------------------------------------

@@ -60,8 +60,7 @@ def stand_or_hit(player, dealer, my_deck):
     If Stand is chosen, player keep with his hand and is dealer's turn.
     """
     while True:
-        choice = input(f"\n\n{player['name']}, Do you want to STAND (s) or HIT (h)?")
-        print("_________________________________________________________________________")
+        choice = input(f"\n{player['name']}, Do you want to STAND (s) or HIT (h)?")
         if choice == 's':
             break
         elif choice == 'h':
@@ -70,7 +69,7 @@ def stand_or_hit(player, dealer, my_deck):
             print(f"\n{player['name']}: {player['hand']}\n")
             player_sum = calculate_points(player['hand'])
             if player_sum > 21:
-                return "\nBoom YOU BURST!!... dealer's turn..."
+                return "\nBoom YOU BUST!!... dealer's turn..."
             elif player_sum == 21:
                 return "\n You've got 21 points! dealer's turn"
         else:

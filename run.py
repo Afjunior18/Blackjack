@@ -15,6 +15,12 @@ init(autoreset=True)
 menu()
 clear_terminal()
 player_name = welcome_message()
+clear_terminal()
+print(f"Welcome {player_name} to the Blackjack Game!")  
+
+
+
+
 
 def main():
     """
@@ -33,6 +39,7 @@ def main():
         print("\nBlack Jack Game!!!")
         print("-------------------------------------------------------------------------")
         display_hand(player, dealer) # function so show up player and dealer objects with initial cards
+        print("\n-------------------------------------------------------------------------")
         
         stand_or_hit(player, dealer, my_deck) # plyer's turn, has to decide if Stand or Hit a new card
         
