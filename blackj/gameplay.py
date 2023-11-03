@@ -1,5 +1,6 @@
 from blackj.deck import Deck
 from blackj.deck import Card
+import time
 
 # Function Create players ------------------------------------------------
 
@@ -60,7 +61,17 @@ def stand_or_hit(player, dealer, my_deck):
     If Stand is chosen, player keep with his hand and is dealer's turn.
     """
     while True:
-        choice = input(f"\n{player['name']}, Do you want to STAND (s) or HIT (h)?")
+        
+        player_sum = calculate_points(player['hand'])
+        
+        if player_sum >= 15:
+            choice = input(f"\n{player['name']}, Do you want to STAND (s) or HIT (h)?")
+        else:
+            time.sleep(3)
+            print("You need to drawn a card (until upu get 15 points or more)")
+            time.sleep(3)
+            choice = 'h'
+            
         if choice == 's':
             break
         elif choice == 'h':

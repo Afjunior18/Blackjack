@@ -80,23 +80,29 @@ def main():
     
     clear_terminal()
     
+    print(f"\nPlayed a total of: {total_round} rounds.\n")
+    print("-------------------------------------------------------------------------")
+    
     final_winner = result_final_winner(player_round, dealer_round)
+    
+    time.sleep(3)
+        
     print(f"\nPlayer wins: Total of {player_round} rounds.")
     print(f"Dealer wins: Total of {dealer_round} rounds.")
-    print(f"Tie: Total of {tie_round}.\n")
+    print(f"Tie: Total of {tie_round}.")
     
-    time.sleep(4)
+    time.sleep(3)
     print("\n-------------------------- The WINNER IS: -------------------------------")
     
     time.sleep(4)
     if final_winner == "Player":
-        print("\nYou're the WINNER!!")
+        print("\nYou're the WINNER!!\n")
         print("-------------------------------------------------------------------------")
     elif final_winner == "Dealer":
-        print("\nYou Lose!! DEALER WINS...")
+        print("\nYou Lose!! DEALER WINS...\n")
         print("-------------------------------------------------------------------------")
     else:
-        print("\nIt's a tie!...")
+        print("\nIt's a tie!...\n")
         print("-------------------------------------------------------------------------")
 
 
