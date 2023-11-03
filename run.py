@@ -31,6 +31,7 @@ def main():
     total_round = 0
     player_round = 0
     dealer_round = 0
+    tie_round = 0
     
     while total_round < 5: # total rounds 
         total_round += 1 
@@ -47,7 +48,7 @@ def main():
         
         player_score = calculate_points(player['hand']) # calculate the player's score
         
-        print("\nDEALER'S TURN!!!----------------------------------------------------------")
+        print("\nDEALER'S TURN!!!---------------------------------------------------------")
         time.sleep(4)
         
         dealer_turn(dealer, my_deck) # Function to call dealer's turn
@@ -67,18 +68,20 @@ def main():
             player_round += 1
         elif "DEALER WINS" in winner_result:
             dealer_round += 1
-        
-        time.sleep(3)
-        print(f"Player round: {player_round}")
-        print(f"Dealer round: {dealer_round}")
-        print("-------------------------------------------------------------------------")
+        elif "TIE" in winner_result:
+            tie_round += 1
         
         time.sleep(3)    
         print(f"\nPlayed a total of: {total_round} rounds.\n")
+        print(f"Player round: {player_round}")
+        print(f"Dealer round: {dealer_round}")
+        print(f"Tie: {tie_round}")
+        print("-------------------------------------------------------------------------")
     
     final_winner = result_final_winner(player_round, dealer_round)
     print(f"\nPlayer wins: Total of {player_round} rounds.")
-    print(f"Dealer wins: Total of {dealer_round} rounds.\n")
+    print(f"Dealer wins: Total of {dealer_round} rounds.")
+    print(f"Tie: Total of {tie_round}\n")
     
     time.sleep(4)
     print("\n-------------------------- The WINNER IS: -------------------------------")

@@ -98,7 +98,7 @@ def show_winner(player_score, dealer_score):
     """
     if player_score > 21 and dealer_score > 21:
         print("-------------------------------------------------------------------------")
-        return "\nYou both bust\n"
+        return "\nYou both bust... it's a TIE\n"
     elif player_score > 21:
         print("-------------------------------------------------------------------------")
         return "\nYou bust... DEALER WINS!\n"
@@ -113,7 +113,7 @@ def show_winner(player_score, dealer_score):
         return "\nYOU WIN!\n"
     else:
         print("-------------------------------------------------------------------------")
-        return "\nIt's a tie!"
+        return "\nIt's a TIE!"
 
 # Display player's hand and dealer's hand -----------------------------------------------
 
