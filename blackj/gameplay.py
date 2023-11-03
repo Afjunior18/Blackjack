@@ -61,7 +61,7 @@ def stand_or_hit(player, dealer, my_deck):
     """
     while True:
         choice = input(f"\n\n{player['name']}, Do you want to STAND (s) or HIT (h)?")
-        print("_____________________________________________________________________")
+        print("_________________________________________________________________________")
         if choice == 's':
             break
         elif choice == 'h':
@@ -142,12 +142,12 @@ def calculate_points(hand):
 
 # Calculate final winner after 5 rounds ---------------------------------------------------
 
-def result_final_winner(player_points, dealer_points):
+def result_final_winner(player_round, dealer_round):
     """
     """
-    if player_points > dealer_points:
+    if player_round > dealer_round:
         return "Player"
-    elif player_points < dealer_points:
+    elif player_round < dealer_round:
         return "Dealer"
     else:
         return "Its a tie"

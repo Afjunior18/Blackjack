@@ -21,8 +21,8 @@ def main():
     Main loop of the game, totalizing 5 rounds to check at the end who's the winner.
     """
     total_round = 0
-    player_points = 0
-    dealer_points = 0
+    player_round = 0
+    dealer_round = 0
     
     while total_round < 5: # total rounds 
         total_round += 1 
@@ -53,18 +53,19 @@ def main():
         print(winner_result)
         print("-------------------------------------------------------------------------")
     
-        if "Player" in winner_result:
-            player_points += 1
-        elif "Dealer" in winner_result:
-            dealer_points += 1
+        if "YOU WIN" in winner_result:
+            player_round += 1
+        elif "DEALER WINS" in winner_result:
+            dealer_round += 1
         
-        if total_round == 5:
-            break
-        
-        final_winner = result_final_winner(player_points, dealer_points)
-        
+        print(f"Player round: {player_round}")
+        print(f"Dealer round: {dealer_round}")
     
-    print(f"\nPlayed a total of: {total_round} rounds.\n")
+        print(f"\nPlayed a total of: {total_round} rounds.\n")
+    
+    final_winner = result_final_winner(player_round, dealer_round)
+    print(f"\nPlayer wins: Total of {player_round} rounds.")
+    print(f"Dealer wins: Total of {dealer_round} rounds.\n")
     
     print("\n-------------------------- The WINNER IS: -------------------------------")
     
