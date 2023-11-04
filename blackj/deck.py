@@ -31,3 +31,6 @@ class Deck:
     def draw_card(self):
         return random.choice(self.cards)
     
+    def shuffle(self):
+        random.shuffle(self.cards)
+    
