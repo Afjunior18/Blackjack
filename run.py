@@ -6,7 +6,7 @@ from blackj.gameplay import create_players, deal_cards, stand_or_hit, display_ha
 from blackj.deck import Deck
 from blackj.utilities import clear_terminal
 from blackj.gameplay import card_value_to_int, calculate_points, dealer_turn, show_winner
-from blackj.gameplay import result_final_winner
+from blackj.gameplay import result_final_winner, display_player_hand, display_dealer_hand
 
 import time
 
@@ -46,9 +46,14 @@ def main():
         
         stand_or_hit(player, dealer, my_deck) # plyer's turn, has to decide if Stand or Hit a new card
         
+        display_player_hand(player)
+        
         player_score = calculate_points(player['hand']) # calculate the player's score
         
-        print("\nDEALER'S TURN!!!---------------------------------------------------------")
+        print("\nDEALER'S TURN!!!---------------------------------------------------------\n")
+        
+        display_dealer_hand(dealer)
+        
         time.sleep(4)
         
         dealer_turn(dealer, my_deck) # Function to call dealer's turn

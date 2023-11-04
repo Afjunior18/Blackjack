@@ -152,6 +152,26 @@ def display_hand(player, dealer):
     print(f"\n{player['name']}'s hand: {', '.join(player_hand)}\n")
     print(f"{dealer['name']}'s hand: {', '.join(dealer_hand)}")
 
+# Display player's hand -----------------------------------------------------------------
+
+def display_player_hand(player):
+    """
+    Display player's hand
+    """
+    player_hand = [f"{card} of {suit}" for card, suit in player['hand']]
+
+    print(f"\n{player['name']}'s hand: {', '.join(player_hand)}\n")
+
+# Display dealer's hand ------------------------------------------------------------------
+
+def display_dealer_hand(dealer):
+    """
+    Display dealer's hand
+    """
+    dealer_hand = [f"{card} of {suit}" for card, suit in dealer['hand']]
+
+    print(f"{dealer['name']}'s hand: {', '.join(dealer_hand)}")
+
 # Calculate the point -------------------------------------------------------------------
 
 def calculate_points(hand):
