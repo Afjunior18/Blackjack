@@ -1,6 +1,7 @@
 from blackj.deck import Deck
 from blackj.deck import Card
 import time
+import random
 
 # Function Create players ------------------------------------------------
 
@@ -18,17 +19,16 @@ def create_players(player_name, my_deck):
     player['hand'] = [(card.value, card.suit) for card in player['hand']]
     dealer['hand'] = [(card.value, card.suit) for card in dealer['hand']]
     
-    #Check if player or dealer starts with 22 points (two Aces)
+    # Check if player or if dealer starts with 22 points (two Aces), if one of them
+    # start, my_deck will be shuffled and player and dealer object will be create again.
      
     if calculate_points(player['hand']) == 22:
-        # Replace one Ace with a new card
-        player['hand'] = [card for card in player['hand'] if card[0] != 'Ace']
-        player['hand'].append((my_deck.draw_card().value, my_deck.draw_card().suit))
+        my_deck.shuffle()
+        player, dealer = create_players(player_name, my_deck)
         
     if calculate_points(dealer['hand']) == 22:
-        # Replace one Ace with a new card
-        dealer['hand'] = [card for card in dealer['hand'] if card[0] != 'Ace']
-        dealer['hand'].append((my_deck.draw_card().value, my_deck.draw_card().suit))
+        my_deck.shuffle()
+        player, dealer = create_players(player_name, my_deck)
 
     return player, dealer
 
@@ -78,6 +78,7 @@ def stand_or_hit(player, dealer, my_deck):
         
         if player_sum >= 15:
             choice = input(f"\n{player['name']}, Do you want to STAND (s) or HIT (h)?")
+            print("-------------------------------------------------------------------------")
         else:
             time.sleep(3)
             print("You need to drawn a card (until upu get 15 points or more)")

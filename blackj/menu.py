@@ -9,7 +9,7 @@ def menu():
     """
     while True:
         print("-------------------------------- Game Rules ------------------------------------")
-        print("\n     1 - Rules              2 - Start the game             3 - Exit             ")
+        print("      1 - Rules              2 - Start the game               3 - Exit        ")
         print("--------------------------------------------------------------------------------")
         
         choice = input("Enter your choice: ")

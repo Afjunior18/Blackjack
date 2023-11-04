@@ -27,8 +27,6 @@ def rules_blackjack():
     """
     Display the rules of the Blackjack game.
     """
-    print("\nBlackjack Rules!")
-    print("--------------------------------------------------------------------------------")
     print("The goal is to outscore the dealer in 5 matches per round.\n"
           "the winner is the one with the most match wins in the round.\n")
     print("Objective:")

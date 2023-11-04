@@ -8,6 +8,7 @@ from blackj.utilities import clear_terminal
 from blackj.gameplay import card_value_to_int, calculate_points, dealer_turn, show_winner
 from blackj.gameplay import result_final_winner, display_player_hand, display_dealer_hand
 
+import random
 import time
 
 init(autoreset=True)
@@ -41,7 +42,7 @@ def main():
         
         print("\nBlack Jack Game!!!")
         print("-------------------------------------------------------------------------")
-        display_hand(player, dealer) # function so show up player and dealer objects with initial cards
+        display_hand(player, dealer) # function so show up player and dealer object with initial cards
         print("\n-------------------------------------------------------------------------")
         
         stand_or_hit(player, dealer, my_deck) # plyer's turn, has to decide if Stand or Hit a new card
