@@ -92,10 +92,10 @@ def stand_or_hit(player, dealer, my_deck):
             print(f"\n{player['name']}, You drawn: {drawn_card.value} of {drawn_card.suit}\n")
             player_sum = calculate_points(player['hand'])
             if player_sum > 21:
-                print("\nYOU BUST!!... dealer's turn...")
+                print("\nYOU BUST!!... dealer's turn...\n")
                 return
             elif player_sum == 21:
-                print("\n You've got 21 points! dealer's turn")
+                print("\nYou've got 21 points! dealer's turn\n")
                 return
         else:
             print("Invalid input, please (s) for stand or (h) for hit")
@@ -138,7 +138,7 @@ def show_winner(player_score, dealer_score):
         return "\nYOU WIN!\n"
     else:
         print("-------------------------------------------------------------------------")
-        return "\nIt's a TIE!"
+        return "\nIt's a TIE!\n"
 
 # Display player's hand and dealer's hand -----------------------------------------------
 

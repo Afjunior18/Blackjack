@@ -60,7 +60,8 @@ def main():
         
         dealer_score = calculate_points(dealer['hand'])
         
-        print(f"\nPlayer's score: {player_score} points")
+        print("\n-------------------------------------------------------------------------")
+        print(f"Player's score: {player_score} points")
         print(f"Dealer's score: {dealer_score} points")    
         time.sleep(4)
         
@@ -82,6 +83,10 @@ def main():
         print(f"Dealer round: {dealer_round}")
         print(f"Tie: {tie_round}")
         print("-------------------------------------------------------------------------")
+        
+        time.sleep(5)
+    
+        clear_terminal()
     
     clear_terminal()
     
