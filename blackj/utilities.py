@@ -2,6 +2,7 @@ import os
 
 # Clear terminal -----------------------------------------------------------
 
+
 def clear_terminal():
     """
     Clear the terminal screen.

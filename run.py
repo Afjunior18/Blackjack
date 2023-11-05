@@ -1,5 +1,6 @@
 
 from colorama import Fore, Back, Style, init
+from art import *
 from blackj.messages import welcome_message, rules_blackjack
 from blackj.menu import menu
 from blackj.gameplay import create_players, deal_cards, stand_or_hit, display_hand
@@ -11,7 +12,12 @@ from blackj.gameplay import result_final_winner, display_player_hand, display_de
 import random
 import time
 
+
 init(autoreset=True)
+
+# tprint("Blackjack")
+
+tprint("21AJ",font="block",chr_ignore=True)
 
 menu()
 clear_terminal()

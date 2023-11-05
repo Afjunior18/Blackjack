@@ -34,7 +34,7 @@ def rules_blackjack():
     print("1 - STAND: Keep current cards and pass the turn to the dealer.\n"
           "2 - HIT: Draw an additional card\n")
     print('"Exceeding 21 points results in a BUST"')
-    print('"Ace counts as 11pts. If you start with 2 Aces, new cards will be given."\n')
+    print('"Ace counts as 11pts. If you start with 2 Aces, new cards will be given"\n')
     print("Player's Turn:")
     print("Is required to HIT until reaching 15pts, then can choose to STAND or HIT.\n")
     print("Dealer's Turn:")
