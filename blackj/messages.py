@@ -6,7 +6,7 @@ def welcome_message():
     Ensure that the input is valid (letters only) and return the formatted name.
     """
     print("Blackjack Game!")
-    print("-------------------------------------------------------------------------\n")
+    print("--------------------------------------------------------------------------------\n")
     while True:
         try:
             name = input("What is your player's name?\n")
@@ -29,16 +29,14 @@ def rules_blackjack():
     """
     print("The goal is to outscore the dealer in 5 matches per round.\n"
           "the winner is the one with the most match wins in the round.\n")
-    print("Objective:")
-    print("Reach a total of 21pts or get as close as possible without bust it.\n")
+    print("Objective: Reach a total of 21pts or get as close as possible without bust it.\n")
     print("Options:")
     print("1 - STAND: Keep current cards and pass the turn to the dealer.\n"
-          "2 - HIT: Draw an additional card.\n")
-    print("Notes:")
-    print("Exceeding 21 points results in a BUST.")
-    print("Ace always counts as 11pts. If you start with 2 Aces, one will be replaced.\n")
+          "2 - HIT: Draw an additional card\n")
+    print('"Exceeding 21 points results in a BUST"')
+    print('"Ace counts as 11pts. If you start with 2 Aces, new cards will be given."\n')
     print("Player's Turn:")
     print("Is required to HIT until reaching 15pts, then can choose to STAND or HIT.\n")
     print("Dealer's Turn:")
     print("Dealer will always HIT until reaching 17 points or higher.\n")
-    print("Scoring: 2 - 10: Face value, Jack, Quen, King: 10 pts, Ace: 11pts)")
+    print("Scoring: 2 - 10: Face value, Jack, Quen, King: 10 pts, Ace: 11pts")

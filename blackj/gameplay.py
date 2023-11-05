@@ -79,7 +79,7 @@ def stand_or_hit(player, dealer, my_deck):
         if player_sum >= 15:
             choice = input(f"{player['name']}, Do you want to STAND (s) or HIT (h)?\n"
                            "----------------------------------------------------------"
-                           "---------------\n")
+                           "----------------------\n")
         else:
             time.sleep(3)
             print("You need to drawn a card (until upu get 15 points or more)")
@@ -124,25 +124,25 @@ def show_winner(player_score, dealer_score):
     Display a message indicating the outcome of the game.
     """
     if player_score > 21 and dealer_score > 21:
-        print("-------------------------------------------------------------------------")
+        print("--------------------------------------------------------------------------------")
         return "\nYou both bust... it's a TIE\n"
     elif player_score > 21:
-        print("-------------------------------------------------------------------------")
+        print("--------------------------------------------------------------------------------")
         return "\nYou bust... DEALER WINS!\n"
     elif dealer_score > 21:
-        print("-------------------------------------------------------------------------")
+        print("--------------------------------------------------------------------------------")
         return "\nDealer bust... YOU WIN!\n"
     elif player_score < dealer_score:
-        print("-------------------------------------------------------------------------")
+        print("--------------------------------------------------------------------------------")
         return "\nDEALER WINS!\n"
     elif player_score > dealer_score:
-        print("-------------------------------------------------------------------------")
+        print("--------------------------------------------------------------------------------")
         return "\nYOU WIN!\n"
     else:
-        print("-------------------------------------------------------------------------")
+        print("--------------------------------------------------------------------------------")
         return "\nIt's a TIE!\n"
 
-# Display player's hand and dealer's hand -----------------------------------------------
+# Display player and dealer's hand -----------------------------------------------
 
 def display_hand(player, dealer):
     """
