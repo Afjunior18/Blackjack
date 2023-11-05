@@ -42,7 +42,12 @@ def main():
         
         stand_or_hit(player, dealer, my_deck) # plyer's turn, has to decide if Stand or Hit a new card
         
+        print("\n--------------------------------------------------------------------------------")
+        print("\nFinal Player's hand:")
         display_player_hand(player)
+        print("--------------------------------------------------------------------------------")
+        
+        time.sleep(4)
         
         player_score = calculate_points(player['hand']) # calculate the player's score
         
@@ -54,9 +59,17 @@ def main():
         
         dealer_turn(dealer, my_deck) # Function to call dealer's turn
         
-        dealer_score = calculate_points(dealer['hand'])
+        time.sleep(4)
         
         print("\n--------------------------------------------------------------------------------")
+        print("\nFinal Dealer's hand:\n")
+        display_dealer_hand(dealer)
+        print("\n--------------------------------------------------------------------------------")
+        
+        time.sleep(3)        
+        
+        dealer_score = calculate_points(dealer['hand'])
+        
         print(f"Player's score: {player_score} points")
         print(f"Dealer's score: {dealer_score} points")
             
@@ -109,7 +122,7 @@ def main():
         print("\nYou're the WINNER!!\n")
         print("--------------------------------------------------------------------------------")
     elif final_winner == "Dealer":
-        print("\nYou Lose!! DEALER WINS...\n")
+        print("\nDEALER WINS...\n")
         print("--------------------------------------------------------------------------------")
     else:
         print("\nIt's a tie!...\n")
