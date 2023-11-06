@@ -3,19 +3,18 @@ from colorama import Fore, Back, Style, init
 from art import *
 from blackj.messages import welcome_message, rules_blackjack
 from blackj.menu import menu
-from blackj.gameplay import create_players, deal_cards, stand_or_hit, display_hand
+from blackj.gameplay import create_players, deal_cards, stand_or_hit
 from blackj.deck import Deck
 from blackj.utilities import clear_terminal
-from blackj.gameplay import card_value_to_int, calculate_points, dealer_turn, show_winner
-from blackj.gameplay import result_final_winner, display_player_hand, display_dealer_hand
+from blackj.gameplay import card_value_to_int, calculate_points, dealer_turn
+from blackj.gameplay import result_final_winner, display_player_hand
+from blackj.gameplay import display_dealer_hand, show_winner, display_hand
 
 import random
 import time
 
 
 init(autoreset=True)
-
-# tprint("Blackjack")
 
 tprint("21AJ",font="block",chr_ignore=True)
 
@@ -138,8 +137,11 @@ def main():
     
     clear_terminal()
     
-    menu()
+    print(f"{player_name}!\nThank you for playing! We hope you had a great time.\n"
+          "Would you like to play again? Feel free to choose from the menu below.\n"
+          "Goodbye and see you next time!")
 
+    menu()
 
 
 if __name__ == "__main__":

@@ -1,3 +1,4 @@
+from art import *
 from blackj.messages import welcome_message, rules_blackjack
 from blackj.utilities import clear_terminal
 
@@ -21,6 +22,7 @@ def menu():
             pass
             break
         elif choice == "3":
+            tprint("Good-bye!")
             exit()
         else:
             print("Invalid Choice: Please choose '1', '2' or '3'")

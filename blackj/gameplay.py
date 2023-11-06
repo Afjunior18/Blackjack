@@ -132,7 +132,7 @@ def show_winner(player_score, dealer_score):
         return "\nYou bust... DEALER WINS!\n"
     elif dealer_score > 21:
         print("--------------------------------------------------------------------------------")
-        return "\nDealer bust... YOU WIN!\n"
+        return "\nDealer busts... YOU WIN!\n"
     elif player_score < dealer_score:
         print("--------------------------------------------------------------------------------")
         return "\nDEALER WINS!\n"

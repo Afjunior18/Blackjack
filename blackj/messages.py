@@ -23,6 +23,7 @@ def welcome_message():
 
 # Rules ------------------------------------------------------------------------------------------
 
+
 def rules_blackjack():
     """
     Display the rules of the Blackjack game.
