@@ -5,27 +5,29 @@ import random
 
 # Function Create players ------------------------------------------------
 
+
 def create_players(player_name, my_deck):
     """
     Create player and dealer objects with initial cards.
     Convert card values to a format suitable for display.
     Return player and dealer objects.
+    If player or dealer starts with 22pts (two Aces), the deck is shuffled
+    and new player and dealer objects are created.
     """
-    player = {'name': player_name, 
+    player = {'name': player_name,
               'hand': [my_deck.draw_card(), my_deck.draw_card()]}
-    dealer = {'name': 'Dealer', 
+    dealer = {'name': 'Dealer',
               'hand': [my_deck.draw_card(), my_deck.draw_card()]}
-    
+
     player['hand'] = [(card.value, card.suit) for card in player['hand']]
     dealer['hand'] = [(card.value, card.suit) for card in dealer['hand']]
-    
-    # Check if player or if dealer starts with 22 points (two Aces), if one of them
-    # start, my_deck will be shuffled and player and dealer object will be create again.
-     
+
+    # If steatment to check if player or dealer has started with 22pts
+
     if calculate_points(player['hand']) == 22:
         my_deck.shuffle()
         player, dealer = create_players(player_name, my_deck)
-        
+
     if calculate_points(dealer['hand']) == 22:
         my_deck.shuffle()
         player, dealer = create_players(player_name, my_deck)
@@ -33,6 +35,7 @@ def create_players(player_name, my_deck):
     return player, dealer
 
 # Deal cards and Function Create players ----------------------------------
+
 
 def deal_cards(my_deck):
     """
@@ -42,6 +45,7 @@ def deal_cards(my_deck):
     return [my_deck.draw_card(), my_deck.draw_card()]
 
 # Convert str card_value to int --------------------------------------------
+
 
 def card_value_to_int(card_value):
     """
@@ -64,7 +68,8 @@ def card_value_to_int(card_value):
             return 0
 
 
-# Stand or Hit function ------------------------------------------------------------
+# Stand or Hit function -------------------------------------------------------
+
 
 def stand_or_hit(player, dealer, my_deck):
     """
@@ -73,26 +78,28 @@ def stand_or_hit(player, dealer, my_deck):
     If Stand is chosen, player keep with his hand and is dealer's turn.
     """
     while True:
-        
+
         player_sum = calculate_points(player['hand'])
-        
+
         if player_sum >= 15:
-            choice = input(f"{player['name']}, Do you want to STAND (s) or HIT (h)?\n"
-                           "----------------------------------------------------------"
-                           "----------------------\n")
+            choice = input(f"{player['name']}, Do you want to STAND (s)\n"
+                           "or HIT (h)?\n-------------------------------------"
+                           "-------------------------------------------")
         else:
             time.sleep(3)
             print("You need to drawn a card (until upu get 15 points or more)")
-            print("--------------------------------------------------------------------------------")
+            print("-----------------------------------------------------------"
+                  "---------------------")
             time.sleep(3)
             choice = 'h'
-            
+
         if choice == 's':
             break
         elif choice == 'h':
             drawn_card = my_deck.draw_card()
             player['hand'].append((drawn_card.value, drawn_card.suit))
-            print(f"\n{player['name']}, You drawn: {drawn_card.value} of {drawn_card.suit}\n")
+            print(f"\n{player['name']}, You drawn: {drawn_card.value}"
+                  "of {drawn_card.suit}\n")
             player_sum = calculate_points(player['hand'])
             if player_sum > 21:
                 print("\nYOU BUST!!... dealer's turn...\n")
@@ -102,14 +109,14 @@ def stand_or_hit(player, dealer, my_deck):
                 return
         else:
             print("Invalid input, please (s) for stand or (h) for hit")
-    
 
-# Dealer's turn-----------------------------------------------------------------------
+
+# Dealer's turn----------------------------------------------------------------
 
 def dealer_turn(dealer, my_deck):
     """
-    Function dealer turn.
-    while loop for hit a new card until get <= 17 points
+    Dealer turn.
+    while loop for hit a new card until get <= 17pts or more.
     """
     while calculate_points(dealer['hand']) <= 17:
         draw_card = my_deck.draw_card()
@@ -117,7 +124,8 @@ def dealer_turn(dealer, my_deck):
         print(f"\nDealer drew: {draw_card.value} of {draw_card.suit}")
     return dealer
 
-# Function to show the winner --------------------------------------------------------
+# Function to show the winner -------------------------------------------------
+
 
 def show_winner(player_score, dealer_score):
     """
@@ -125,25 +133,32 @@ def show_winner(player_score, dealer_score):
     Display a message indicating the outcome of the game.
     """
     if player_score > 21 and dealer_score > 21:
-        print("--------------------------------------------------------------------------------")
+        print("---------------------------------------------------------------"
+              "-----------------")
         return "\nYou both bust... it's a TIE\n"
     elif player_score > 21:
-        print("--------------------------------------------------------------------------------")
+        print("---------------------------------------------------------------"
+              "-----------------")
         return "\nYou bust... DEALER WINS!\n"
     elif dealer_score > 21:
-        print("--------------------------------------------------------------------------------")
+        print("---------------------------------------------------------------"
+              "-----------------")
         return "\nDealer busts... YOU WIN!\n"
     elif player_score < dealer_score:
-        print("--------------------------------------------------------------------------------")
+        print("---------------------------------------------------------------"
+              "-----------------")
         return "\nDEALER WINS!\n"
     elif player_score > dealer_score:
-        print("--------------------------------------------------------------------------------")
+        print("---------------------------------------------------------------"
+              "-----------------")
         return "\nYOU WIN!\n"
     else:
-        print("--------------------------------------------------------------------------------")
+        print("---------------------------------------------------------------"
+              "-----------------")
         return "\nIt's a TIE!\n"
 
-# Display player and dealer's hand -----------------------------------------------
+# Display player and dealer's hand --------------------------------------------
+
 
 def display_hand(player, dealer):
     """
@@ -155,7 +170,8 @@ def display_hand(player, dealer):
     print(f"\n{player['name']}'s hand: {', '.join(player_hand)}\n")
     print(f"{dealer['name']}'s hand: {', '.join(dealer_hand)}")
 
-# Display player's hand -----------------------------------------------------------------
+# Display player's hand -------------------------------------------------------
+
 
 def display_player_hand(player):
     """
@@ -165,7 +181,8 @@ def display_player_hand(player):
 
     print(f"\n{player['name']}'s hand: {', '.join(player_hand)}\n")
 
-# Display dealer's hand ------------------------------------------------------------------
+# Display dealer's hand -------------------------------------------------------
+
 
 def display_dealer_hand(dealer):
     """
@@ -175,23 +192,26 @@ def display_dealer_hand(dealer):
 
     print(f"{dealer['name']}'s hand: {', '.join(dealer_hand)}")
 
-# Calculate the point -------------------------------------------------------------------
+# Calculate the point ---------------------------------------------------------
+
 
 def calculate_points(hand):
     """
-    Function to calculate player's hand
+    Function to calculate the points
     """
     player_points = 0
-    
+
     for card_value, _ in hand:
         player_points += card_value_to_int(card_value)
-    
+
     return player_points
 
-# Calculate final winner after 5 rounds ---------------------------------------------------
+# Calculate final winner after 5 rounds ---------------------------------------
+
 
 def result_final_winner(player_round, dealer_round):
     """
+    Display a final winner message based on 5 rounds played
     """
     if player_round > dealer_round:
         return "Player"
@@ -199,5 +219,3 @@ def result_final_winner(player_round, dealer_round):
         return "Dealer"
     else:
         return "Its a tie"
-        
-    
