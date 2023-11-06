@@ -176,8 +176,11 @@ def main():
     print(f"{player_name}!\nThank you for playing!\n"
           "We hope you had a great time.\n"
           "Would you like to play again?\n"
-          "Feel free to choose from the menu below.\n"
-          "Goodbye and see you next time!")
+          "Feel free to choose from the menu below.\n")
+
+    time.sleep(3)
+
+    print("Good bye and see you next time!")
 
     menu()
 

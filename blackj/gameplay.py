@@ -82,9 +82,9 @@ def stand_or_hit(player, dealer, my_deck):
         player_sum = calculate_points(player['hand'])
 
         if player_sum >= 15:
-            choice = input(f"{player['name']}, Do you want to STAND (s)\n"
-                           "or HIT (h)?\n-------------------------------------"
-                           "-------------------------------------------")
+            choice = input(f"{player['name']}, Do you want to STAND (s)"
+                           " or HIT (h)?\n------------------------------------"
+                           "--------------------------------------------\n")
         else:
             time.sleep(3)
             print("You need to drawn a card (until upu get 15 points or more)")
@@ -99,7 +99,7 @@ def stand_or_hit(player, dealer, my_deck):
             drawn_card = my_deck.draw_card()
             player['hand'].append((drawn_card.value, drawn_card.suit))
             print(f"\n{player['name']}, You drawn: {drawn_card.value}"
-                  "of {drawn_card.suit}\n")
+                  f" of {drawn_card.suit}\n")
             player_sum = calculate_points(player['hand'])
             if player_sum > 21:
                 print("\nYOU BUST!!... dealer's turn...\n")
