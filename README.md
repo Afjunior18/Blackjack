@@ -57,7 +57,7 @@ The 'Rules Page' (option 1 in the menu) offers players a concise overview of the
 
 ![Game Rules](docs/rules.png)
 
-## Start Game
+### Start Game
 
 When choose 'Start Game' (option 2 in the menu). The player will be requested to enter a player's name.
 
@@ -67,7 +67,7 @@ After entering their name and pressing the player is greeted with a personalized
 
 ![Welcome message](docs/welcome_message.png)
 
-## Player's turn
+### Player's turn
 
 If the player starts with less than 15 points, they will receive a prompt informing them to draw cards until they reach 15 points or more. Once achieved, they will be presented with an option to 'Stand' or 'Hit' for an additional card.
 
@@ -81,7 +81,7 @@ However, if the player chooses to 'Hit' and subsequently busts (exceeds 21 point
 
 [Player Bust](docs/player_turn_03.png)
 
-## Dealer's Turn
+### Dealer's Turn
 
 The dealer's hand is revealed. If the dealer has 17 points or more, they will stop and their final hand will be displayed
 
@@ -95,13 +95,13 @@ Afterwards, the round's points are displayed, followed by a message defining the
 
 [Score Rounds](docs/score_rounds.png)
 
-## Final Winner Message
+### Final Winner Message
 
 Once the five rounds are completed, a summary is presented, showcasing the total number of rounds played. Following this, the final results are revealed, declaring the champion based on the number of rounds won or announcing a tie if both players have an equal number of victories.
 
 [Final Result](docs/final_result_winner.png)
 
-## Final Message to the User
+### Final Message to the User
 
 Wrap up the game with a personalized thank-you message. Players are encouraged to share feedback or report any issues via the provided email address. Decide whether to play another round using the menu below.
 
@@ -203,3 +203,18 @@ Each of these libraries played a key role in enhancing the functionality and vis
 5. ![Static Badge](https://img.shields.io/badge/Lucid-Flowchart-red) : Was used to create a flowchart, enhancing the project's documentation and readability.
 
 6. ![Static Badge](https://img.shields.io/badge/Code%20Institute-Template-red) : was employed, offering essential files to simulate a terminal environment directly in the browser.
+
+7. ![Static Badge](https://img.shields.io/badge/Shields.io-Badges-red) : Used to add images as badges in the README.
+
+## Media
+
+### Study Resources:
+
+1. [Python Tutor](https://pythontutor.com/visualize.html#mode=edit) - Used for code visualization and analysis.
+2. [YouTube Tutorial: Python Menu](https://www.youtube.com/watch?v=yFopU1ESCcQ) - Demonstrated creating a menu in Python.
+3. Code Institute Course Lectures
+4. [W3Schools Python Section](https://www.w3schools.com/python)
+5. [YouTube Tutorial:](https://www.youtube.com/watch?v=mpL0Y01v6tY)
+6. [Python Channel on Youtube:](https://www.youtube.com/@coreyms)
+7. [Code Review Stack Exchange: Blackjack Implementation](https://codereview.stackexchange.com/questions/85751/implement-blackjack-in-python-with-oop)
+
