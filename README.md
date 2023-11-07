@@ -122,21 +122,13 @@ Extensive terminal-based testing was employed to detect and rectify potential is
 
 Thorough testing was conducted to verify accuracy of the application. Manual tests were performed to cover various scenarios, and screenshots were taken to document the results.
 
-1. Invalid Input Handling: In the main menu, providing an invalid option (e.g., entering '4') triggered an appropriate error message.
+1. [Menu Input Handling](docs/manual_testing_01.png) : In the main menu, providing an invalid option (e.g., entering '4') triggered an appropriate error message.
 
-[Menu Input Handling](docs/manual_testing_01.png)
+2. [Player Name Validation](docs/manual_testing_02.png) : Testing input for the player's name revealed that the application correctly accepts only alphabetic characters. Attempting to use numbers resulted in an error message.
 
-2. Player Name Validation: Testing input for the player's name revealed that the application correctly accepts only alphabetic characters. Attempting to use numbers resulted in an error message.
+3. [Player Lenght Limit](docs/manual_testing_03.png) : A test was conducted to ensure that the application enforces a maximum character limit of 15 for player name. Any input exceeding this limit triggered an error.
 
-[Player Name Validation](docs/manual_testing_02.png)
-
-3. Name Length Limit: A test was conducted to ensure that the application enforces a maximum character limit of 15 for player name. Any input exceeding this limit triggered an error.
-
-[Player Lenght Limit](docs/manual_testing_03.png)
-
-4. Invalid Choice Handling: When prompted to choose 'stand' (s) or 'hit' (h), entering any other character produced an expected error message.
-
-[Invalid Choice Handling](docs/manual_testing_04.png)
+4. [Invalid Choice Handling](docs/manual_testing_04.png): When prompted to choose 'stand' (s) or 'hit' (h), entering any other character produced an expected error message.
 
 These tests were conducted to ensure that the application handles user input effectively and provides clear feedback in case of erroneous entries.
 
@@ -218,6 +210,7 @@ Each of these libraries played a key role in enhancing the functionality and vis
 6. [Python Channel on Youtube:](https://www.youtube.com/@coreyms)
 7. [Code Review Stack Exchange: Blackjack Implementation](https://codereview.stackexchange.com/questions/85751/implement-blackjack-in-python-with-oop)
 8. [Stack Overflow](https://stackoverflow.com/): This platform was frequently visited for troubleshooting and seeking solutions to coding challenges.
+9. [PEP 8](https://peps.python.org/pep-0008/)
 
 ## Deployment
 
@@ -250,23 +243,43 @@ Explore the Deployed Website: Visit the live site by clicking on the following l
 <summary>Heroku Deployment</summary>
 
 1 - Create an account on Heroku.
+
 2 - Create a new app.
+
 3 - Choose your location.
-3 - Click on "Create app."
-4 - Navigate to "Settings."
-    - Configure environment variables and click "Add."
-    - create a config var called PORT. Set to 8000.
-    - Add buildpacks to your application:
-    - Add Python buildpack.
-    - Enter python and save changes.
-    - Add Node.js buildpack.
-    - Enter nodejs and save changes.
-5 - Go to "Deploy."
-6 - Select GitHub.
-    - Connect to your GitHub repository.
-    - Search for the repository and connect.
-7 - Deploy the branch manually.
-8 - Once the deployment process is complete, click "View" to access your deployed application.
+
+4 - Click on "Create app."
+
+5 - Navigate to "Settings."
+- Configure environment variables and click "Add."
+- create a config var called PORT. Set to 8000.
+- Add buildpacks to your application:
+- Add Python buildpack.
+- Enter python and save changes.
+- Add Node.js buildpack.
+- Enter nodejs and save changes.
+
+6 - Go to "Deploy."
+7 - Select GitHub.
+
+- Connect to your GitHub repository.
+- Search for the repository and connect.
+
+8 - Deploy the branch manually.
+
+9 - Once the deployment process is complete, click "View" to access your deployed application.
 
 Explore the Deployed Website: Visit the live site by clicking on the following link: [Live Website: 21 Blackjack Game](https://gameblackjack-a1c3e6bb9955.herokuapp.com/)
 </details>
+
+## Credit
+
+1. [YouTube Tutorial:](https://www.youtube.com/watch?v=mpL0Y01v6tY) - I gained a general idea of what I needed to create a blackjack game.
+
+2. [Python Channel on Youtube:](https://www.youtube.com/@coreyms) - This channel helped me with various questions and was crucial for understanding some of the topics implemented in the project.
+
+3. [YouTube Tutorial: Python Menu](https://www.youtube.com/watch?v=yFopU1ESCcQ) - Demonstrated creating a menu in Python.
+
+## Acknowledgments
+
+A special thanks to my mentor [Matt Bodden](https://github.com/MattBCoding) whose insights and advice were instrumental in bringing this project to completion. Your guidance made all the difference.
