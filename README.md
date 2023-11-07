@@ -57,12 +57,6 @@ The 'Rules Page' (option 1 in the menu) offers players a concise overview of the
 
 ![Game Rules](docs/rules.png)
 
-### Exit
-
-The farewell message (option 3 in the menu), thanks the player for their time and quit the game.
-
-![Good Bye](docs/good_bye.png)
-
 ## Start Game
 
 When choose 'Start Game' (option 2 in the menu). The player will be requested to enter a player's name.
@@ -100,3 +94,51 @@ However, if the dealer starts with less than 17 points, they will automatically 
 Afterwards, the round's points are displayed, followed by a message defining the outcome of the round. Additionally, a message reveals the total number of rounds played so far and the current score for each player.
 
 [Score Rounds](docs/score_rounds.png)
+
+## Final Winner Message
+
+Once the five rounds are completed, a summary is presented, showcasing the total number of rounds played. Following this, the final results are revealed, declaring the champion based on the number of rounds won or announcing a tie if both players have an equal number of victories.
+
+[Final Result](docs/final_result_winner.png)
+
+## Final Message to the User
+
+Wrap up the game with a personalized thank-you message. Players are encouraged to share feedback or report any issues via the provided email address. Decide whether to play another round using the menu below.
+
+[Final Message to the User](docs/final_message.png)
+
+### Exit
+
+The farewell message (option 3 in the menu), thanks the player for their time and quit the game.
+
+[Good Bye Message](docs/good_bye.png)
+
+## Testing
+
+Testing was a crucial phase in the development process. I thoroughly examined every aspect of the application to ensure seamless functionality and user-friendly interactions.
+Extensive terminal-based testing was employed to detect and rectify potential issues. We ran multiple scenarios, testing both correct and incorrect user inputs, to guarantee the application responds appropriately in various situations.
+
+### Manual Testing
+
+Thorough testing was conducted to verify accuracy of the application. Manual tests were performed to cover various scenarios, and screenshots were taken to document the results.
+
+1. Invalid Input Handling: In the main menu, providing an invalid option (e.g., entering '4') triggered an appropriate error message.
+
+[Menu Input Handling](docs/manual_testing_01.png)
+
+2. Player Name Validation: Testing input for the player's name revealed that the application correctly accepts only alphabetic characters. Attempting to use numbers resulted in an error message.
+
+[Player Name Validation](docs/manual_testing_02.png)
+
+3. Name Length Limit: A test was conducted to ensure that the application enforces a maximum character limit of 15 for player name. Any input exceeding this limit triggered an error.
+
+[Player Lenght Limit](docs/manual_testing_03.png)
+
+Invalid Choice Handling: When prompted to choose 'stand' (s) or 'hit' (h), entering any other character produced an expected error message.
+
+[Invalid Choice Handling](docs/manual_testing_04.png)
+
+These tests were conducted to ensure that the application handles user input effectively and provides clear feedback in case of erroneous entries.
+
+
+
