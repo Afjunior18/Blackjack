@@ -154,3 +154,20 @@ In addition to manual testing, automated checks were performed using the PEP8 ch
 
 6. [Utilities.py file](docs/utilities_validation.png)
 
+## Bugs and Issues
+
+Debugging and troubleshooting were integral parts of the development process. Constant attention was given to identifying and resolving potential issues to ensure a smooth user experience.
+
+The codebase was thoroughly checked using the PEP8 checker tool (https://pep8ci.herokuapp.com/). It initially flagged several warnings related to formatting and whitespace. However, diligent efforts were made to address each of these concerns. As a result, all warnings were rectified, resulting in a clean codebase with zero warnings across all files.
+
+Throughout the development process, rigorous testing and debugging were conducted to ensure the application's reliability. Multiple playthroughs were undertaken to assess the game's performance, and I'm pleased to report that no apparent errors or issues were encountered. The game ran smoothly and consistently, providing a seamless and enjoyable experience for users. This extensive testing process instills confidence in the application's stability and functionality.
+
+### Addressed Concern
+
+In the course of developing the game, a specific scenario was encountered where a player could initially start with 22 points, denoted by two Aces. To address this, an initial conditional check was implemented: [initial conditional](docs/conditional.png).
+
+After extensive testing, it was observed that this situation could arise, leading to a potential error: [AttributeError](docs/attributeError.png)
+
+Subsequently, a solution was implemented by adding the shuffle method to the Deck class: [Shuffle Method](docs/def_shuffle.png)
+
+It is worth noting that extensive testing has been conducted, and up to the present moment, no further occurrences of this error have been observed. However, due to the random nature of the cards, it is not possible to definitively verify the resolution.
