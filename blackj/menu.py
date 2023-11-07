@@ -10,9 +10,9 @@ def menu():
     Display menu options and handle user's choice.
     """
     while True:
-        print("-------------------------------- Game Rules -------------------"
+        print("---------------------------------- Menu -----------------------"
               "-----------------")
-        print("      1 - Rules              2 - Start the game               3"
+        print("       1 - Rules           2 - Start the game               3"
               "- Exit        ")
         print("---------------------------------------------------------------"
               "-----------------")
