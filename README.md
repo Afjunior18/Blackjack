@@ -134,11 +134,23 @@ Thorough testing was conducted to verify accuracy of the application. Manual tes
 
 [Player Lenght Limit](docs/manual_testing_03.png)
 
-Invalid Choice Handling: When prompted to choose 'stand' (s) or 'hit' (h), entering any other character produced an expected error message.
+4. Invalid Choice Handling: When prompted to choose 'stand' (s) or 'hit' (h), entering any other character produced an expected error message.
 
 [Invalid Choice Handling](docs/manual_testing_04.png)
 
 These tests were conducted to ensure that the application handles user input effectively and provides clear feedback in case of erroneous entries.
 
+In addition to manual testing, automated checks were performed using the PEP8 checker tool (https://pep8ci.herokuapp.com/) to ensure adherence to coding standards and practices.
 
+1. [Run.py file](docs/run_validation.png)
+
+2. [Gameplay.py file](docs/gamplay_validation.png)
+
+3. [Deck.py file](docs/deck_validation.png)
+
+4. [Menu.py file](docs/menu_validation.png)
+
+5. [Messages.py file](docs/messages_validation.png)
+
+6. [Utilities.py file](docs/utilities_validation.png)
 
