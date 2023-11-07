@@ -217,4 +217,56 @@ Each of these libraries played a key role in enhancing the functionality and vis
 5. [YouTube Tutorial:](https://www.youtube.com/watch?v=mpL0Y01v6tY)
 6. [Python Channel on Youtube:](https://www.youtube.com/@coreyms)
 7. [Code Review Stack Exchange: Blackjack Implementation](https://codereview.stackexchange.com/questions/85751/implement-blackjack-in-python-with-oop)
+8. [Stack Overflow](https://stackoverflow.com/): This platform was frequently visited for troubleshooting and seeking solutions to coding challenges.
 
+## Deployment
+
+<details>
+<summary>GitHub Deployment</summary>
+1 - GitHub Account: Begin by creating an account on github.com. The platform is free to use.
+
+2 - Repository Creation: Create a repository to host your website. Click the "+" button on the main page, then select "New Repository."
+
+3 - Repository Details: Provide a name, description, and set it to public.
+
+4 - Access Repository Settings: Navigate to the repository settings.
+
+5 - GitHub Pages Section: Locate this section within the settings.
+
+6 - Branch Selection: Choose the "main" branch for deployment.
+
+7 - Save Changes: Save the settings to initiate the deployment process.
+
+8 - Deployment in Progress: Wait for the confirmation message indicating successful deployment.
+
+9 - Accessing the Live Site: Retrieve the link to your deployed website.
+
+10 - Share the Link: Share the provided link with others.
+
+Explore the Deployed Website: Visit the live site by clicking on the following link: [Live Website: 21 Blackjack Game](https://gameblackjack-a1c3e6bb9955.herokuapp.com/)
+</details>
+
+<details>
+<summary>Heroku Deployment</summary>
+
+1 - Create an account on Heroku.
+2 - Create a new app.
+3 - Choose your location.
+3 - Click on "Create app."
+4 - Navigate to "Settings."
+    - Configure environment variables and click "Add."
+    - create a config var called PORT. Set to 8000.
+    - Add buildpacks to your application:
+    - Add Python buildpack.
+    - Enter python and save changes.
+    - Add Node.js buildpack.
+    - Enter nodejs and save changes.
+5 - Go to "Deploy."
+6 - Select GitHub.
+    - Connect to your GitHub repository.
+    - Search for the repository and connect.
+7 - Deploy the branch manually.
+8 - Once the deployment process is complete, click "View" to access your deployed application.
+
+Explore the Deployed Website: Visit the live site by clicking on the following link: [Live Website: 21 Blackjack Game](https://gameblackjack-a1c3e6bb9955.herokuapp.com/)
+</details>
