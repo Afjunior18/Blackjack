@@ -175,6 +175,8 @@ def main():
 
     print(f"{player_name}!\nThank you for playing!\n"
           "We hope you had a great time.\n"
+          "If you have any feedback or encounter any issues, "
+          "please feel free to contact us at feedback@blackjack.com\n"
           "Would you like to play again?\n"
           "Feel free to choose from the menu below.\n")
 
