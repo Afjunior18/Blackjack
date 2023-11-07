@@ -1,13 +1,11 @@
 # 21 Blackjack Game
 Welcome to the Customized Blackjack Game, a Python project created by Amaury Junior to practice programming skills. This game is inspired by Blackjack but includes some unique rules to make it a distinct gaming experience.
 
-## Game Description
+### Game Description
 
-The Customized Blackjack Game is a command-line application that puts a spin on the traditional Blackjack game. It features modified rules for an engaging and challenging gameplay.
+The Customized Blackjack Game is a command-line application that puts a spin on the traditional Blackjack game. It features modified rules for an engaging and challenging gameplay. [**Live Website: 21 Blackjack Game**](https://gameblackjack-a1c3e6bb9955.herokuapp.com/)
 
 ![Inittial Screen](docs/inittial_screen.png)
-
-[**Live Website: 21 Blackjack Game**](https://gameblackjack-a1c3e6bb9955.herokuapp.com/)
 
 ## User Experience (UX)
 
@@ -74,3 +72,31 @@ When choose 'Start Game' (option 2 in the menu). The player will be requested to
 After entering their name and pressing the player is greeted with a personalized welcome message.The game then commences, revealing the player's initial hand of two cards.
 
 ![Welcome message](docs/welcome_message.png)
+
+## Player's turn
+
+If the player starts with less than 15 points, they will receive a prompt informing them to draw cards until they reach 15 points or more. Once achieved, they will be presented with an option to 'Stand' or 'Hit' for an additional card.
+
+[Player Turn](docs/player_turn_01.png)
+
+If the player chooses to 'Stand', they will be shown their final hand with all the cards.
+
+[Player Final Hand](docs/player_turn_02.png)
+
+However, if the player chooses to 'Hit' and subsequently busts (exceeds 21 points), their final hand will be displayed along with a message indicating the bust. The player will then be informed that it's the dealer's turn.
+
+[Player Bust](docs/player_turn_03.png)
+
+## Dealer's Turn
+
+The dealer's hand is revealed. If the dealer has 17 points or more, they will stop and their final hand will be displayed
+
+[Dealer's Hand](docs/dealer_tunr_01.png)
+
+However, if the dealer starts with less than 17 points, they will automatically be required to draw another card until they reach 17 or more points.
+
+[Dealer drew card](docs/dealer_tunr_02.png)
+
+Afterwards, the round's points are displayed, followed by a message defining the outcome of the round. Additionally, a message reveals the total number of rounds played so far and the current score for each player.
+
+[Score_rounds](docs/score_rounds.png)
