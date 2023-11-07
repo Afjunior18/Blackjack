@@ -1,9 +1,9 @@
 # 21 Blackjack Game
 Welcome to the Customized Blackjack Game, a Python project created by Amaury Junior to practice programming skills. This game is inspired by Blackjack but includes some unique rules to make it a distinct gaming experience.
 
-### Game Description
+The Customized Blackjack Game is a command-line application that puts a spin on the traditional Blackjack game. It features modified rules for an engaging and challenging gameplay. 
 
-The Customized Blackjack Game is a command-line application that puts a spin on the traditional Blackjack game. It features modified rules for an engaging and challenging gameplay. [**Live Website: 21 Blackjack Game**](https://gameblackjack-a1c3e6bb9955.herokuapp.com/)
+[**Live Website: 21 Blackjack Game**](https://gameblackjack-a1c3e6bb9955.herokuapp.com/)
 
 ![Inittial Screen](docs/inittial_screen.png)
 
@@ -162,7 +162,7 @@ The codebase was thoroughly checked using the PEP8 checker tool (https://pep8ci.
 
 Throughout the development process, rigorous testing and debugging were conducted to ensure the application's reliability. Multiple playthroughs were undertaken to assess the game's performance, and I'm pleased to report that no apparent errors or issues were encountered. The game ran smoothly and consistently, providing a seamless and enjoyable experience for users. This extensive testing process instills confidence in the application's stability and functionality.
 
-### Addressed Concern
+- Addressed Concern
 
 In the course of developing the game, a specific scenario was encountered where a player could initially start with 22 points, denoted by two Aces. To address this, an initial conditional check was implemented: [initial conditional](docs/conditional.png).
 
@@ -171,3 +171,35 @@ After extensive testing, it was observed that this situation could arise, leadin
 Subsequently, a solution was implemented by adding the shuffle method to the Deck class: [Shuffle Method](docs/def_shuffle.png)
 
 It is worth noting that extensive testing has been conducted, and up to the present moment, no further occurrences of this error have been observed. However, due to the random nature of the cards, it is not possible to definitively verify the resolution.
+
+## Technologies Used
+
+![Python](docs/python.png) This project was developed using Python.
+
+Here are the libraries utilized in this project:
+
+1. ![Static Badge](https://img.shields.io/badge/Random-Library-red) : Used for generating random numbers, crucial for shuffling cards and simulating gameplay.
+
+2. ![Static Badge](https://img.shields.io/badge/Time-Library-red) : Employed for introducing pauses and controlling the pacing of the game, enhancing the user experience.
+
+3. ![Static Badge](https://img.shields.io/badge/Coloroma-Library-red) : This library provides an easy way to add colored output to the terminal, making the game more visually appealing and informative.
+
+4. ![Static Badge](https://img.shields.io/badge/Art-Library-red) : Utilized for creating stylish text-based graphics and logos, adding an aesthetic touch to the game's interface.
+
+5. ![Static Badge](https://img.shields.io/badge/OS-Library-red) : This library provides functions to interact with the operating system, allowing for tasks like clearing the terminal screen during gameplay.
+
+Each of these libraries played a key role in enhancing the functionality and visual appeal of the Blackjack game.
+
+### Tools
+
+1. ![Static Badge](https://img.shields.io/badge/GitHub-Repository-red) : Served as the version control repository, facilitating collaboration and code management.
+
+2. ![Static Badge](https://img.shields.io/badge/CodeAnywhere-Code%20editor-red) : Was utilized as the integrated development environment (IDE) and code editor, providing a seamless coding experience.
+
+3. ![Static Badge](https://img.shields.io/badge/Heroku-Deploy-red) : Using for deployment, to make the application accessible online.
+
+4. ![Static Badge](https://img.shields.io/badge/PEP8CI-Validator-red) : To ensure code quality and adherence to best practice and to detect and address any potential errors or issues
+
+5. ![Static Badge](https://img.shields.io/badge/Lucid-Flowchart-red) : Was used to create a flowchart, enhancing the project's documentation and readability.
+
+6. ![Static Badge](https://img.shields.io/badge/Code%20Institute-Template-red) : was employed, offering essential files to simulate a terminal environment directly in the browser.
