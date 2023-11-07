@@ -47,6 +47,30 @@ The project aimed to create a terminal-based application with interactive and se
 
 ## Features
 
-As part of the game, the 'Welcome Screen' serves as the initial interface where players are greeted and introduced to the game. It features the game's logo, providing options for players to navigate through the menu.
+### Landing page
 
-![Welcome Screen](docs/inittial_screen.png)
+As part of the game, the 'Landing page' serves as the initial interface where players are greeted and introduced to the game. It features the game's logo, providing options for players to navigate through the menu.
+
+![Landing page](docs/inittial_screen.png)
+
+### Game Rules
+
+The 'Rules Page' (option 1 in the menu) offers players a concise overview of the game's mechanics, ensuring clear understanding and smoother gameplay. It provides essential information in an easy-to-follow format, enabling players to make informed decisions during matches.
+
+![Game Rules](docs/rules.png)
+
+### Exit
+
+The farewell message (option 3 in the menu), thanks the player for their timem and quit the game.
+
+![Good Bye](docs/good_bye.png)
+
+## Start Game
+
+When choose 'Start Game' (option 2 in the menu). The player will be requested to enter a player's name.
+
+![Input Player Name](docs/input_name_player.png)
+
+After entering their name and pressing the player is greeted with a personalized welcome message.The game then commences, revealing the player's initial hand of two cards.
+
+![Welcome message](docs/welcome_message.png)
