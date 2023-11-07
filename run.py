@@ -175,14 +175,12 @@ def main():
 
     print(f"{player_name}!\nThank you for playing!\n"
           "We hope you had a great time.\n"
-          "If you have any feedback or encounter any issues, "
+          "\nIf you have any feedback or encounter any issues,"
           "please feel free to contact us at feedback@blackjack.com\n"
-          "Would you like to play again?\n"
-          "Feel free to choose from the menu below.\n")
+          "\nWould you like to play again?\n"
+          "\nFeel free to choose from the menu below.\n")
 
     time.sleep(3)
-
-    print("Good bye and see you next time!")
 
     menu()
 

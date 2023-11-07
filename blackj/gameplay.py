@@ -87,7 +87,7 @@ def stand_or_hit(player, dealer, my_deck):
                            "--------------------------------------------\n")
         else:
             time.sleep(3)
-            print("You need to drawn a card (until upu get 15 points or more)")
+            print("You need to drawn a card (until you get 15 points or more)")
             print("-----------------------------------------------------------"
                   "---------------------")
             time.sleep(3)

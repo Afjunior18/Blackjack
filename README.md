@@ -59,7 +59,7 @@ The 'Rules Page' (option 1 in the menu) offers players a concise overview of the
 
 ### Exit
 
-The farewell message (option 3 in the menu), thanks the player for their timem and quit the game.
+The farewell message (option 3 in the menu), thanks the player for their time and quit the game.
 
 ![Good Bye](docs/good_bye.png)
 
@@ -95,8 +95,8 @@ The dealer's hand is revealed. If the dealer has 17 points or more, they will st
 
 However, if the dealer starts with less than 17 points, they will automatically be required to draw another card until they reach 17 or more points.
 
-[Dealer drew card](docs/dealer_tunr_02.png)
+[Dealer final Hand](docs/dealer_tunr_02.png)
 
 Afterwards, the round's points are displayed, followed by a message defining the outcome of the round. Additionally, a message reveals the total number of rounds played so far and the current score for each player.
 
-[Score_rounds](docs/score_rounds.png)
+[Score Rounds](docs/score_rounds.png)
