@@ -18,10 +18,11 @@ def welcome_message():
             name = input(Fore.BLUE + "What is your player's name?\n")
             name = name.capitalize()
             if not name.isalpha():
-                raise ValueError(Fore.RED + "Invalid input, Please enter letters only\n")
+                raise ValueError(Fore.RED + "Invalid input, Please enter"
+                                 "letters only\n")
             if len(name) >= 15:
-                raise ValueError(Fore.RED + "\nName to long, please enter a short name."
-                                 "(No more than 15 caracteres)")
+                raise ValueError(Fore.RED + "\nName to long, please enter a"
+                                 "short name.(No more than 15 caracteres)")
         except ValueError as e:
             print(e)
         else:

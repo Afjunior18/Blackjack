@@ -26,7 +26,6 @@ player_name = welcome_message()
 clear_terminal()
 print(Back.BLUE + f"Welcome {player_name} to the Blackjack Game!")
 
-
 def main():
     """
     Orchestrates the core game loop, conducting 5 rounds of play,
@@ -46,6 +45,7 @@ def main():
     by the player and dealer.
     Displays a good bye message and give the option to play again.
     """
+
     total_round = 0
     player_round = 0
     dealer_round = 0
@@ -83,8 +83,7 @@ def main():
 
         player_score = calculate_points(player['hand'])
 
-        print(Fore.GREEN + "\nDEALER'S TURN!!!--------------------------------"
-              "--------------------------------\n")
+        print(Fore.GREEN + "\nDEALER'S TURN!!!\n")
 
         display_dealer_hand(dealer)
 
