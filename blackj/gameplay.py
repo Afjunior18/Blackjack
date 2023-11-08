@@ -89,7 +89,7 @@ def stand_or_hit(player, dealer, my_deck):
         player_sum = calculate_points(player['hand'])
 
         if player_sum >= 15:
-            choice = input(f"{player['name']}, Do you want to"
+            choice = input(f"{player['name']}, Do you want to "
                            "STAND (s) or HIT (h)?\n---------------------------"
                            "-------------------------------------------------"
                            "----\n")

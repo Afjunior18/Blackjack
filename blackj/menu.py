@@ -15,14 +15,14 @@ def menu():
     Display menu options and handle user's choice.
     """
     while True:
-        print(Fore.BLUE + "----------------------------------- Menu -------"
-              "--------------------------------")
-        print(Fore.BLUE + "       1 - Rules            2 - Start the game    "
-              "   3 - Exit        ")
-        print(Fore.BLUE + "---------------------------------------------------"
-              "-----------------------------")
+        print("---------------------------------- Menu -----------------------"
+               "-----------------")
+        print("       1 - Rules           2 - Start the game               3"
+              "- Exit        ")
+        print("---------------------------------------------------------------"
+              "-----------------")
 
-        choice = input(Fore.BLUE + "Enter your choice: ")
+        choice = input("Enter your choice: ")
 
         if choice == "1":
             clear_terminal()
