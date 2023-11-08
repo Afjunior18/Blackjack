@@ -124,28 +124,26 @@ Thorough testing was conducted to verify accuracy of the application. Manual tes
 
 1. Menu Input Hangdling : In the main menu, providing an invalid option, triggered an appropriate error message.
 
-Attempting to use:
+    Attempting to use:
 
-    - e.g., entering '4' - [Menu Input Handling](docs/manual_testing_01.png)
-    - e.g., entering 'space' - [Menu Input Handling](docs/menu_handling_03.png)
+    - e.g., entering '4': - [Menu Input Handling](docs/manual_testing_01.png)
+    
+    - e.g., entering 'space': -  [Menu Input Handling](docs/menu_handling_03.png)
+    
     - e.g., entering 'letter' - [Menu Input Handling](docs/menu_handling_02.png)
-    - e.g., entering ' ' - [Menu Input Handling](docs/manual_testing_04.png)
-    - e.g., entering '=' - [Menu Input Handling](docs/menu_handling_05.png)
+    
+    - e.g., entering ' ': - [Menu Input Handling](docs/manual_testing_04.png)
+
+    - e.g., entering '=': - [Menu Input Handling](docs/menu_handling_05.png)
 
 
 2. Player Name Validation : Testing input for the player's name revealed that the application correctly accepts only alphabetic characters. Attempting to use numbers resulted in an error message.
 
-Attempting to use: Numbers, letter with number, blank space, special character.
+    Attempting to use: Numbers, letter with number, blank space, special character. - [Player Name Validation](docs/manual_testing_02.png)
 
-    -[Player Name Validation](docs/manual_testing_02.png)
+3. Player Lenght Limit: A test was conducted to ensure that the application enforces a maximum character limit of 15 for player name. Any input exceeding this limit triggered an error. - [Player Lenght Limit](docs/manual_testing_03.png)
 
-3. Player Lenght Limit: A test was conducted to ensure that the application enforces a maximum character limit of 15 for player name. Any input exceeding this limit triggered an error.
-
-    - [Player Lenght Limit](docs/manual_testing_03.png)
-
-4. Invalid Choice Handling : When prompted to choose 'stand' (s) or 'hit' (h), entering any other character produced an expected error message.
-
-    - [Invalid Choice Handling](docs/manual_testing_04.png)
+4. Invalid Choice Handling : When prompted to choose 'stand' (s) or 'hit' (h), entering any other character produced an expected error message - [Invalid Choice Handling](docs/manual_testing_04.png)
 
 These tests were conducted to ensure that the application handles user input effectively and provides clear feedback in case of erroneous entries.
 
