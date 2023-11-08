@@ -115,11 +115,11 @@ def main():
 
         display_dealer_hand(dealer)
 
-        time.sleep(4)
+        time.sleep(3)
 
         dealer_turn(dealer, my_deck)
 
-        time.sleep(4)
+        time.sleep(3)
 
         print("\n-----------------------------------------------------------"
               "---------------------")
@@ -137,7 +137,7 @@ def main():
         print(Fore.BLUE + f"Player's score: {player_score} points")
         print(Fore.GREEN + f"Dealer's score: {dealer_score} points")
 
-        time.sleep(4)
+        time.sleep(3)
 
         winner_result = show_winner(player_score, dealer_score)
 
@@ -161,7 +161,7 @@ def main():
         print("-------------------------------------------------------------"
               "-------------------")
 
-        time.sleep(5)
+        time.sleep(3)
 
         clear_terminal()
 
@@ -184,7 +184,7 @@ def main():
     print("\n------------------------------ The WINNER IS: -----------------"
           "-----------------")
 
-    time.sleep(4)
+    time.sleep(3)
 
     if final_winner == "Player":
         print(Fore.BLUE + "\nYou're the WINNER!!\n")
@@ -199,7 +199,7 @@ def main():
         print("-------------------------------------------------------------"
               "-------------------")
 
-    time.sleep(4)
+    time.sleep(3)
 
     clear_terminal()
 
