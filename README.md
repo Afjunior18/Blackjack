@@ -131,8 +131,6 @@ Thorough testing was conducted to verify accuracy of the application. Manual tes
     - e.g., entering 'space': -  [Menu Input Handling](docs/menu_handling_03.png)
     
     - e.g., entering 'letter' - [Menu Input Handling](docs/menu_handling_02.png)
-    
-    - e.g., entering ' ': - [Menu Input Handling](docs/manual_testing_04.png)
 
     - e.g., entering '=': - [Menu Input Handling](docs/menu_handling_05.png)
 
