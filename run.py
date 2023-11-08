@@ -5,7 +5,6 @@ import time
 
 from art import *
 from blackj.messages import welcome_message, rules_blackjack
-from blackj.menu import menu
 from blackj.gameplay import create_players, deal_cards, stand_or_hit
 from blackj.deck import Deck
 from blackj.utilities import clear_terminal
@@ -20,11 +19,36 @@ init(autoreset=True)
 
 tprint("21AJ", font="block", chr_ignore=True)
 
-menu()
-clear_terminal()
-player_name = welcome_message()
-clear_terminal()
-print(Back.BLUE + f"Welcome {player_name} to the Blackjack Game!")
+
+# Menu rules/start game -------------------------------------------------------
+
+
+def menu():
+    """
+    1 Display menu options and handle user's choice.
+    """
+    while True:
+        print("---------------------------------- Menu -----------------------"
+              "-----------------")
+        print("       1 - Rules           2 - Start the game               3"
+              "- Exit        ")
+        print("---------------------------------------------------------------"
+              "-----------------")
+
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            clear_terminal()
+            rules_blackjack()
+        elif choice == "2":
+            clear_terminal()
+            main()
+        elif choice == "3":
+            tprint("Good-bye!")
+            exit()
+        else:
+            print("Invalid Choice: Please choose '1', '2' or '3'")
+
 
 def main():
     """
@@ -45,6 +69,10 @@ def main():
     by the player and dealer.
     Displays a good bye message and give the option to play again.
     """
+    clear_terminal()
+    player_name = welcome_message()
+    clear_terminal()
+    print(Back.BLUE + f"Welcome {player_name} to the Blackjack Game!")
 
     total_round = 0
     player_round = 0
@@ -187,35 +215,5 @@ def main():
     menu()
 
 
-# Menu rules/start game -------------------------------------------------------
-
-
-def menu():
-    """
-    Display menu options and handle user's choice.
-    """
-    while True:
-        print("---------------------------------- Menu -----------------------"
-              "-----------------")
-        print("       1 - Rules           2 - Start the game               3"
-              "- Exit        ")
-        print("---------------------------------------------------------------"
-              "-----------------")
-
-        choice = input("Enter your choice: ")
-
-        if choice == "1":
-            clear_terminal()
-            rules_blackjack()
-        elif choice == "2":
-            clear_terminal()
-            main()
-        elif choice == "3":
-            tprint("Good-bye!")
-            exit()
-        else:
-            print("Invalid Choice: Please choose '1', '2' or '3'")
-
-
 if __name__ == "__main__":
-    main()
+    menu()
