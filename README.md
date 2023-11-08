@@ -122,13 +122,30 @@ Extensive terminal-based testing was employed to detect and rectify potential is
 
 Thorough testing was conducted to verify accuracy of the application. Manual tests were performed to cover various scenarios, and screenshots were taken to document the results.
 
-1. [Menu Input Handling](docs/manual_testing_01.png) : In the main menu, providing an invalid option (e.g., entering '4') triggered an appropriate error message.
+1. Menu Input Hangdling : In the main menu, providing an invalid option, triggered an appropriate error message.
 
-2. [Player Name Validation](docs/manual_testing_02.png) : Testing input for the player's name revealed that the application correctly accepts only alphabetic characters. Attempting to use numbers resulted in an error message.
+Attempting to use:
 
-3. [Player Lenght Limit](docs/manual_testing_03.png) : A test was conducted to ensure that the application enforces a maximum character limit of 15 for player name. Any input exceeding this limit triggered an error.
+    - e.g., entering '4' - [Menu Input Handling](docs/manual_testing_01.png)
+    - e.g., entering 'space' - [Menu Input Handling](docs/menu_handling_03.png)
+    - e.g., entering 'letter' - [Menu Input Handling](docs/menu_handling_02.png)
+    - e.g., entering ' ' - [Menu Input Handling](docs/manual_testing_04.png)
+    - e.g., entering '=' - [Menu Input Handling](docs/menu_handling_05.png)
 
-4. [Invalid Choice Handling](docs/manual_testing_04.png): When prompted to choose 'stand' (s) or 'hit' (h), entering any other character produced an expected error message.
+
+2. Player Name Validation : Testing input for the player's name revealed that the application correctly accepts only alphabetic characters. Attempting to use numbers resulted in an error message.
+
+Attempting to use: Numbers, letter with number, blank space, special character.
+
+    -[Player Name Validation](docs/manual_testing_02.png)
+
+3. Player Lenght Limit: A test was conducted to ensure that the application enforces a maximum character limit of 15 for player name. Any input exceeding this limit triggered an error.
+
+    - [Player Lenght Limit](docs/manual_testing_03.png)
+
+4. Invalid Choice Handling : When prompted to choose 'stand' (s) or 'hit' (h), entering any other character produced an expected error message.
+
+    - [Invalid Choice Handling](docs/manual_testing_04.png)
 
 These tests were conducted to ensure that the application handles user input effectively and provides clear feedback in case of erroneous entries.
 
@@ -140,11 +157,9 @@ In addition to manual testing, automated checks were performed using the PEP8 ch
 
 3. [Deck.py file](docs/deck_validation.png)
 
-4. [Menu.py file](docs/menu_validation.png)
+4. [Messages.py file](docs/messages_validation.png)
 
-5. [Messages.py file](docs/messages_validation.png)
-
-6. [Utilities.py file](docs/utilities_validation.png)
+5. [Utilities.py file](docs/utilities_validation.png)
 
 ## Bugs and Issues
 
@@ -170,15 +185,15 @@ It is worth noting that extensive testing has been conducted, and up to the pres
 
 Here are the libraries utilized in this project:
 
-1. ![Static Badge](https://img.shields.io/badge/Random-Library-red) : Used for generating random numbers, crucial for shuffling cards and simulating gameplay.
+1. ![Static Badge](https://img.shields.io/badge/Random-Library-red) : Was crucial for obtaining cards randomly and for shuffling if necessary during game development.
 
-2. ![Static Badge](https://img.shields.io/badge/Time-Library-red) : Employed for introducing pauses and controlling the pacing of the game, enhancing the user experience.
+2. ![Static Badge](https://img.shields.io/badge/Time-Library-red) : Employed for introducing pauses and controlling the pacing of the game, enhancing the User Experience.
 
-3. ![Static Badge](https://img.shields.io/badge/Coloroma-Library-red) : This library provides an easy way to add colored output to the terminal, making the game more visually appealing and informative.
+3. ![Static Badge](https://img.shields.io/badge/Coloroma-Library-red) : This library provides an easy way to add colored output to the terminal, making the game more visually appealing and informative for better UX.
 
-4. ![Static Badge](https://img.shields.io/badge/Art-Library-red) : Utilized for creating stylish text-based graphics and logos, adding an aesthetic touch to the game's interface.
+4. ![Static Badge](https://img.shields.io/badge/Art-Library-red) : Utilized for creating stylish text-based graphics and logos, adding an aesthetic touch to the game's interface, enhancing the User Experience.
 
-5. ![Static Badge](https://img.shields.io/badge/OS-Library-red) : This library provides functions to interact with the operating system, allowing for tasks like clearing the terminal screen during gameplay.
+5. ![Static Badge](https://img.shields.io/badge/OS-Library-red) : This library provides functions to interact with the operating system, allowing for tasks like clearing the terminal screen during gameplay for better UX.
 
 Each of these libraries played a key role in enhancing the functionality and visual appeal of the Blackjack game.
 

@@ -117,7 +117,7 @@ def stand_or_hit(player, dealer, my_deck):
                 print(Fore.BLUE + "\nYou've got 21 points! dealer's turn\n")
                 return
         else:
-            print(Fore.RED + "Invalid input, please (s) for stand or (h)"
+            print(Fore.RED + "Invalid choice, please (s) for stand or (h)"
                   "for hit\n")
 
 
