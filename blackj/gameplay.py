@@ -1,7 +1,14 @@
+# library used to obtain game cards randomly
+import random
+# llibrary used to time each stage of the game
+import time
+
 from blackj.deck import Deck
 from blackj.deck import Card
-import time
-import random
+
+# library used to colorize
+from colorama import Fore, Back, Style, init
+init(autoreset=True)
 
 # Function Create players ------------------------------------------------
 
@@ -82,12 +89,12 @@ def stand_or_hit(player, dealer, my_deck):
         player_sum = calculate_points(player['hand'])
 
         if player_sum >= 15:
-            choice = input(f"{player['name']}, Do you want to STAND (s)"
+            choice = input(Fore.BLUE + f"{player['name']}, Do you want to STAND (s)"
                            " or HIT (h)?\n------------------------------------"
                            "--------------------------------------------\n")
         else:
             time.sleep(3)
-            print("You need to drawn a card (until you get 15 points or more)")
+            print(Fore.RED + "You need to drawn a card (until you get 15 points or more)")
             print("-----------------------------------------------------------"
                   "---------------------")
             time.sleep(3)
@@ -102,13 +109,13 @@ def stand_or_hit(player, dealer, my_deck):
                   f" of {drawn_card.suit}\n")
             player_sum = calculate_points(player['hand'])
             if player_sum > 21:
-                print("\nYOU BUST!!... dealer's turn...\n")
+                print(Fore.RED + "\nYOU BUST!!... dealer's turn...\n")
                 return
             elif player_sum == 21:
-                print("\nYou've got 21 points! dealer's turn\n")
+                print(Fore.YELLOW +"\nYou've got 21 points! dealer's turn\n")
                 return
         else:
-            print("Invalid input, please (s) for stand or (h) for hit")
+            print(Fore.RED + "Invalid input, please (s) for stand or (h) for hit\n")
 
 
 # Dealer's turn----------------------------------------------------------------

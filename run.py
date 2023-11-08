@@ -1,7 +1,8 @@
+# library used to obtain game cards randomly
 import random
+# llibrary used to time each stage of the game
 import time
 
-from colorama import Fore, Back, Style, init
 from art import *
 from blackj.messages import welcome_message, rules_blackjack
 from blackj.menu import menu
@@ -12,8 +13,10 @@ from blackj.gameplay import card_value_to_int, calculate_points, dealer_turn
 from blackj.gameplay import result_final_winner, display_player_hand
 from blackj.gameplay import display_dealer_hand, show_winner, display_hand
 
-
+# library used to colorize
+from colorama import Fore, Back, Style, init
 init(autoreset=True)
+
 
 tprint("21AJ", font="block", chr_ignore=True)
 
@@ -21,7 +24,7 @@ menu()
 clear_terminal()
 player_name = welcome_message()
 clear_terminal()
-print(f"Welcome {player_name} to the Blackjack Game!")
+print(Back.BLUE + f"Welcome {player_name} to the Blackjack Game!")
 
 
 def main():
@@ -56,7 +59,7 @@ def main():
 
         player, dealer = create_players(player_name, my_deck)
 
-        print("\nBlack Jack Game!!!")
+        print(Back.BLUE + "\nBlack Jack Game!!!")
         print("-------------------------------------------------------------"
               "-------------------")
 
@@ -69,7 +72,7 @@ def main():
 
         print("\n-----------------------------------------------------------"
               "---------------------")
-        print("\nFinal Player's hand:")
+        print(Fore.BLUE + "\nFinal Player's hand:")
 
         display_player_hand(player)
 
@@ -80,8 +83,8 @@ def main():
 
         player_score = calculate_points(player['hand'])
 
-        print("\nDEALER'S TURN!!!-------------------------------------------"
-              "---------------------\n")
+        print(Fore.GREEN + "\nDEALER'S TURN!!!--------------------------------"
+              "--------------------------------\n")
 
         display_dealer_hand(dealer)
 
@@ -93,7 +96,7 @@ def main():
 
         print("\n-----------------------------------------------------------"
               "---------------------")
-        print("\nFinal Dealer's hand:\n")
+        print(Fore.GREEN + "\nFinal Dealer's hand:\n")
 
         display_dealer_hand(dealer)
 
@@ -104,14 +107,14 @@ def main():
 
         dealer_score = calculate_points(dealer['hand'])
 
-        print(f"Player's score: {player_score} points")
-        print(f"Dealer's score: {dealer_score} points")
+        print(Fore.BLUE + f"Player's score: {player_score} points")
+        print(Fore.GREEN + f"Dealer's score: {dealer_score} points")
 
         time.sleep(4)
 
         winner_result = show_winner(player_score, dealer_score)
 
-        print(winner_result)
+        print(Fore.RED + winner_result)
         print("-------------------------------------------------------------"
               "-------------------")
 
@@ -157,15 +160,15 @@ def main():
     time.sleep(4)
 
     if final_winner == "Player":
-        print("\nYou're the WINNER!!\n")
+        print(Fore.BLUE + "\nYou're the WINNER!!\n")
         print("-------------------------------------------------------------"
               "-------------------")
     elif final_winner == "Dealer":
-        print("\nDEALER WINS...\n")
+        print(Fore.GREEN + "\nDEALER WINS...\n")
         print("-------------------------------------------------------------"
               "-------------------")
     else:
-        print("\nIt's a tie!...\n")
+        print(Fore.RED + "\nIt's a tie!...\n")
         print("-------------------------------------------------------------"
               "-------------------")
 
@@ -174,7 +177,7 @@ def main():
     clear_terminal()
 
     print(f"{player_name}!\nThank you for playing!\n"
-          "We hope you had a great time.\n"
+          "\nWe hope you had a great time.\n"
           "\nIf you have any feedback or encounter any issues,"
           "please feel free to contact us at feedback@blackjack.com\n"
           "\nWould you like to play again?\n"
@@ -183,6 +186,36 @@ def main():
     time.sleep(3)
 
     menu()
+
+
+# Menu rules/start game -------------------------------------------------------
+
+
+def menu():
+    """
+    Display menu options and handle user's choice.
+    """
+    while True:
+        print("---------------------------------- Menu -----------------------"
+              "-----------------")
+        print("       1 - Rules           2 - Start the game               3"
+              "- Exit        ")
+        print("---------------------------------------------------------------"
+              "-----------------")
+
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            clear_terminal()
+            rules_blackjack()
+        elif choice == "2":
+            clear_terminal()
+            main()
+        elif choice == "3":
+            tprint("Good-bye!")
+            exit()
+        else:
+            print("Invalid Choice: Please choose '1', '2' or '3'")
 
 
 if __name__ == "__main__":

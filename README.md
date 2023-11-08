@@ -216,6 +216,7 @@ Each of these libraries played a key role in enhancing the functionality and vis
 
 <details>
 <summary>GitHub Deployment</summary>
+
 1 - GitHub Account: Begin by creating an account on github.com. The platform is free to use.
 
 2 - Repository Creation: Create a repository to host your website. Click the "+" button on the main page, then select "New Repository."
